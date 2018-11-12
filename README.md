@@ -13,7 +13,7 @@ Also a script to symlink everything to `HOME` and another one to fresh install m
 
 # Highlights
 
-* Some very useful aliases, look out for my [venv-utils]().
+* Some very useful aliases, look out for my [venv-utils](https://github.com/masher2/venv-utils).
 * Very clean grey and blue vim and tmux themes which work perfectly together (Pics comming soon).
 * A vim inspired current dir bash prompt.
 
