@@ -31,7 +31,7 @@ sudo -v # Initial sudo to avoid asking for the password again
 sudo apt upgrade
 
 # Install basic programs
-sudo apt install git vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
+sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
 
 # Install snaps
 sudo snap install mailspring telegram-desktop skype
@@ -67,9 +67,6 @@ rm sc-im
 #######################################
 
 # INSTALL DOTFILES
-echo "Downloading my dotfiles"
-git clone dotfiles ~/.dotfiles
-
 echo "Symlinking my dotfiles"
 . ~/.dotfiles/makesymlinks.sh
 
