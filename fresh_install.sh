@@ -34,7 +34,7 @@ sudo apt upgrade
 sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
 
 # I3-gaps dependencies
-sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status xbacklight
 
 # Installing i3
 git clone https://github.com/Airblader/i3.git
@@ -85,6 +85,13 @@ rm -r sc-im
 # INSTALL DOTFILES
 echo "Symlinking my dotfiles"
 . ~/.dotfiles/makesymlinks.sh
+
+'#!/bin/bash
+if synclient -l | grep "TouchpadOff .*=.*0" ; then
+        synclient TouchpadOff=1 ;
+else
+    synclient TouchpadOff=0 ;
+fi' > ~/.scripts/
 
 # Prepare vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
