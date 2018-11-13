@@ -28,7 +28,7 @@ mkhomefolder .venvs    # Projects' virtual environments
 # PROGRAMS
 sudo -v # Initial sudo to avoid asking for the password again
 
-sudo apt upgrade
+sudo apt update
 
 # Install basic programs
 sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
