@@ -33,8 +33,25 @@ sudo apt upgrade
 # Install basic programs
 sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
 
+# I3-gaps dependencies
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status
+
+# Installing i3
+git clone https://github.com/Airblader/i3.git
+cd i3
+git checkout gaps && git pull
+autoreconf --force --install
+mkdir build
+cd build
+../configure --prefix=/usr --sysconfdir=/etc
+make
+sudo make install
+cd ~/.dotfiles
+rm -rf i3
+
 # Install snaps
-sudo snap install mailspring telegram-desktop skype
+sudo snap install mailspring telegram-desktop brave
+sudo snap install --classic skype
 
 # Other instalations
 debinstall "https://download1.rstudio.org" "rstudio-xenial-1.1.463-amd64.deb"
