@@ -28,7 +28,7 @@ mkhomefolder .venvs    # Projects' virtual environments
 # PROGRAMS
 sudo -v # Initial sudo to avoid asking for the password again
 
-sudo apt update
+sudo apt upgrade
 
 # Install basic programs
 sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
@@ -41,13 +41,12 @@ debinstall "https://download1.rstudio.org" "rstudio-xenial-1.1.463-amd64.deb"
 
 # Tmux
 git clone https://github.com/tmux/tmux.git
-wget https://github.com/tmux/tmux/releases/download/2.8/tmux-2.8.tar.gz
-cd tmux-2.8
+cd tmux
 sh autogen.sh
 ./configure && make
 sudo make install
 cd ..
-rm tmux-2.8
+rm -r tmux
 
 # SC-IM
 git clone https://github.com/jmcnamara/libxlsxwriter.git
@@ -55,14 +54,14 @@ cd libxlsxwriter/
 make
 sudo make install
 cd ..
-rm libxlsxwriter
+rm -r libxlsxwriter
 
 git clone https://github.com/andmarti1424/sc-im.git
 cd sc-im/src
 make
 sudo make install
 cd ../..
-rm sc-im
+rm -r sc-im
 
 #######################################
 
