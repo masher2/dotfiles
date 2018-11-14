@@ -31,7 +31,7 @@ sudo -v # Initial sudo to avoid asking for the password again
 sudo apt upgrade
 
 # Install basic programs
-sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses5-dev libxml2-dev libzip-dev
+sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev
 
 # I3-gaps dependencies
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status xbacklight xserver-xorg-input-synaptics

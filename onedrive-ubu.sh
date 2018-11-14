@@ -46,29 +46,10 @@ if ! which ngrok ; then
   wget --quiet http://glmdev.tech/ngrok > /dev/null
   sudo mv ngrok /usr/bin/ngrok
   sudo chmod +x /usr/bin/ngrok
-done
+echo done
 
 echo "Starting OneDrive daemon..."
 onedrived start
-
-echo "Modifying default user directories..."
-rm -rf ~/.config/user-dirs.dirs
-echo '
-# This file was written by an automatic generator while
-# setting up the OneDrive integration with onedrived.
-
-XDG_DESKTOP_DIR="$HOME/OneDrive/Desktop"
-XDG_DOWNLOAD_DIR="$HOME/Downloads"
-XDG_TEMPLATES_DIR="$HOME/Templates"
-XDG_PUBLICSHARE_DIR="$HOME/OneDrive/Public"
-XDG_DOCUMENTS_DIR="$HOME/OneDrive/Documents"
-XDG_MUSIC_DIR="$HOME/OneDrive/Music"
-XDG_PICTURES_DIR="$HOME/OneDrive/Pictures"
-XDG_VIDEOS_DIR="$HOME/OneDrive/Videos"
-' > ~/.config/user-dirs.dirs
-
-rm -rf ~/.config/user-dirs.conf
-echo "enabled=false" > ~/.config/user-dirs.conf
 
 echo "Creating auto-start entry..."
 echo "
