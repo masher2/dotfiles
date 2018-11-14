@@ -56,6 +56,8 @@ sudo snap install --classic skype
 # Other instalations
 debinstall "https://download1.rstudio.org" "rstudio-xenial-1.1.463-amd64.deb"
 
+source ~/.dotfiles/onedrive-ubu.sh
+
 # Tmux
 git clone https://github.com/tmux/tmux.git
 cd tmux
@@ -86,7 +88,7 @@ rm -r sc-im
 echo "Symlinking my dotfiles"
 . ~/.dotfiles/makesymlinks.sh
 
-'#!/bin/bash
+echo '#!/bin/bash
 if synclient -l | grep "TouchpadOff .*=.*0" ; then
         synclient TouchpadOff=1 ;
 else
