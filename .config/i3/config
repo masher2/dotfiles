@@ -172,9 +172,3 @@ bar {
         status_command i3status
 }
 
-
-#################################################
-# Make gnome + i3 work
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec_always --no-startup-id gnome-power-manager
-exec --no-startup-id gnome-flashback
