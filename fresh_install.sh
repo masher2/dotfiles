@@ -50,8 +50,8 @@ cd ~/.dotfiles
 rm -rf i3
 
 # Install snaps
-sudo snap install mailspring telegram-desktop brave
-sudo snap install --classic skype
+sudo snap install mailspring telegram-desktop brave libreoffice
+sudo snap install --classic skype heroku
 
 # Other instalations
 debinstall "https://download1.rstudio.org" "rstudio-xenial-1.1.463-amd64.deb"
