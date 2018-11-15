@@ -43,7 +43,8 @@ echo "Checking for ngrok..."
 if ! which ngrok ; then
   echo "Downloading ngrok... (this may take a while)"
   cd /tmp
-  wget --quiet http://glmdev.tech/ngrok > /dev/null
+  wget --quiet https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null
+  unzip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
   sudo mv ngrok /usr/bin/ngrok
   sudo chmod +x /usr/bin/ngrok
 echo done

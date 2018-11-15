@@ -22,6 +22,10 @@ filetype plugin indent on
 " Files navigation
 set path+=**
 set wildmenu
+nnoremap <leader>e :edit **/*
+nnoremap <leader>t :tabedit **/*
+nnoremap <leader>/ :sp **/*
+nnoremap <leader>\ :vsp **/*
 
 
 " Screen
