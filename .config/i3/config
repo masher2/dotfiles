@@ -8,9 +8,11 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-for_window [class="^.*"] border pixel 2
+# i3-gaps Configuration
+for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 10
+smart_gaps on
 
 set $mod Mod4
 
@@ -70,10 +72,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+backslash split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+slash split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
