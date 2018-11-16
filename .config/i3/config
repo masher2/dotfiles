@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # i3-gaps Configuration
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 gaps inner 10
 gaps outer 10
 smart_gaps on
@@ -18,7 +18,7 @@ set $mod Mod4
 
 ##################################################
 # Startup 
-exec --no-startup-id dropbox
+exec --no-startup-id dropbox start
 exec --no-startup-id onedrived start
 exec --no-startup-id mailspring
 exec --no-startup-id redshift
