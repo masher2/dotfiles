@@ -61,6 +61,15 @@ git clone https://github.com/hastinbe/i3-volume.git
 mv i3-volume/volume ~/.scripts/
 rm -rf i3-volume
 
+# Backlight control for i3
+git clone https://github.com/haikarainen/light.git 
+cd light
+./autogen.sh
+./configure && make
+sudo make install
+cd ..
+rm -rf light
+
 #######################################
 # Other instalations
 debinstall "https://download1.rstudio.org" "rstudio-xenial-1.1.463-amd64.deb"
