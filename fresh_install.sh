@@ -20,11 +20,13 @@ debinstall() {
     rm $2
 }
 
+#######################################
 # FOLDERS
 mkhomefolder .env_vars # Projects' environment variables
 mkhomefolder .scripts  # Projects' scripts
 mkhomefolder .venvs    # Projects' virtual environments
 
+#######################################
 # PROGRAMS
 sudo -v # Initial sudo to avoid asking for the password again
 
@@ -33,6 +35,11 @@ sudo apt upgrade
 # Install basic programs
 sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev postgresql
 
+# Install snaps
+sudo snap install mailspring telegram-desktop brave libreoffice
+sudo snap install --classic skype heroku
+
+#######################################
 # I3-gaps dependencies
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status xbacklight xserver-xorg-input-synaptics compton feh
 
@@ -49,13 +56,16 @@ sudo make install
 cd ~/.dotfiles
 rm -rf i3
 
-# Install snaps
-sudo snap install mailspring telegram-desktop brave libreoffice
-sudo snap install --classic skype heroku
+# i3-volume controls
+git clone https://github.com/hastinbe/i3-volume.git
+mv i3-volume/volume ~/.scripts/
+rm -rf i3-volume
 
+#######################################
 # Other instalations
 debinstall "https://download1.rstudio.org" "rstudio-xenial-1.1.463-amd64.deb"
 
+# OneDrive
 source ~/.dotfiles/onedrive-ubu.sh
 
 # Tmux
