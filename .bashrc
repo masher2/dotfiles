@@ -125,4 +125,5 @@ export PATH=$PATH:$HOME/.pyscripts
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/bin
 export EDITOR="vim"
+export BROWSER="firefox"
 
