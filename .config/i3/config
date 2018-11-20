@@ -9,10 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # i3-gaps Configuration
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 10
 smart_gaps on
+
 
 set $mod Mod4
 
@@ -57,7 +58,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
-bindsym $mod+w exec --no-startup-id $BROWSER
+bindsym $mod+w exec --no-startup-id firefox
 
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -65,6 +66,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+r mode "resize"
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+bindsym $mod+t exec --no-startup-id telegram-desktop
 
 ##################################################
 # A S D F G H J K L
@@ -94,6 +97,8 @@ bindsym $mod+Shift+l move right
 
 ##################################################
 # Z X C V B N M
+
+bindsym $mod+m exec --no-startup-id mailspring
 
 ##################################################
 # Other Keys
@@ -233,3 +238,19 @@ bindsym XF86MonBrightnessDown exec light -U 5
 # light -L
 bindsym XF86KbdBrightnessUp exec light -Ars 'sysfs/leds/asus::kbd_backlight' 1
 bindsym XF86KbdBrightnessDown exec light -Urs 'sysfs/leds/asus::kbd_backlight' 1
+
+#######################################
+# Toggle touchpad
+# Touchpad config on /etc/X11/xorg.conf.d/40-libinput.conf
+# Section "InputClass"
+#         Identifier "libinput touchpad catchall"
+#         MatchIsTouchpad "on"
+#         MatchDevicePath "/dev/input/event*"
+#         Driver "libinput"
+#         Option "ClickMethod" "clickfinger"
+#         Option "HorizontalScrolling" "on"
+#         Option "NaturalScrolling" "on"
+#         Option "ScrollMethod" "twofinger"
+#         Option "Tapping" "off"
+# EndSection
+bindsym XF86TouchpadToggle exec ~/.scripts/toggletouchpad.sh
