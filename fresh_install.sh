@@ -53,7 +53,10 @@ rm -rf arc-icon-theme
 
 #######################################
 # i3-GAPS
-sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status xbacklight xserver-xorg-input-synaptics xserver-xorg-input-libinput libinput-tools compton feh libxcb-composite0 libxcb-composite0-dev libpam0g-dev
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake i3-wm dmenu i3status i3blocks xbacklight xserver-xorg-input-synaptics xserver-xorg-input-libinput libinput-tools compton feh libxcb-composite0 libxcb-composite0-dev libpam0g-dev
+
+# Removing i3-wm 
+sudo apt remove i3-wm
 
 # Installing i3
 git clone https://github.com/Airblader/i3.git
