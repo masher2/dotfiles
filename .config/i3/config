@@ -11,7 +11,7 @@
 # i3-gaps Configuration
 for_window [class="^.*"] border pixel 0
 gaps inner 10
-gaps outer 10
+gaps outer 0
 smart_gaps on
 
 
@@ -99,6 +99,8 @@ bindsym $mod+Shift+l move right
 # Z X C V B N M
 
 bindsym $mod+m exec --no-startup-id mailspring
+
+bindsym $mod+Shift+x exec --no-startup-id ~/.scripts/betterlockscreen -l dim
 
 ##################################################
 # Other Keys

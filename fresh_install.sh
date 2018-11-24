@@ -53,7 +53,7 @@ rm -rf arc-icon-theme
 
 #######################################
 # i3-GAPS
-sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status xbacklight xserver-xorg-input-synaptics xserver-xorg-input-libinput libinput-tools compton feh
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake dmenu i3status xbacklight xserver-xorg-input-synaptics xserver-xorg-input-libinput libinput-tools compton feh libxcb-composite0 libxcb-composite0-dev libpam0g-dev
 
 # Installing i3
 git clone https://github.com/Airblader/i3.git
@@ -81,6 +81,25 @@ cd light
 sudo make install
 cd ..
 rm -rf light
+
+# i3-lock color
+git clone https://github.com/PandorasFox/i3lock-color.git
+cd i3-lock-color
+git tag -f "git-$(git rev-parse --short HEAD)"
+autoreconf -i
+./configure
+make
+sudo make install
+cd ..
+rm -rf i3-lock-color
+
+# Betterlockscreen
+# Add --composite flag to the lock call to avoid problems with compton
+git clone https://github.com/pavanjadhaw/betterlockscreen
+cd betterlockscreen
+mv betterlockscreen ~/.scripts/
+cd ..
+rm -rf betterlockscreen
 
 #######################################
 # OTHER
