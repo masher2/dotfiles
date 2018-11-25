@@ -120,6 +120,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Enable tmux-git
+if [[ \$TMUX ]]; then
+    source ~/.tmux/tmux-git.sh;
+fi
+
 export PATH=$PATH:$HOME/.Rscripts
 export PATH=$PATH:$HOME/.pyscripts
 export PATH=$PATH:$HOME/.scripts
