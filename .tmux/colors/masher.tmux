@@ -18,10 +18,10 @@ set -g status-position bottom # Position of the status bar
 set -g status-justify left    # Justify the window tabs to the left
 set -g status-bg colour232    # Color of the status bar bg
 set -g status-fg colour250    # Color of the session name
-set -g status-attr dim        # ???
-set -g status-left ''     # Remove session name ???
+set -g status-attr none       # Whole statusbar attributes
+set -g status-left ''         # Remove session name
 set -g status-right '[#S] #[fg=colour232,bg=colour240,bold] %d/%m #[fg=colour232,bg=colour242,bold] %H:%M '
-set -g status-right-length 50
+set -g status-right-length 100 # A 'big' number to allow displaying the whole right part when large session and branch names
 set -g status-left-length 20
  
 setw -g window-status-current-fg colour44    # Color of the current window index
