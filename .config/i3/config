@@ -98,6 +98,9 @@ bindsym $mod+Shift+l move right
 ##################################################
 # Z X C V B N M
 
+bindsym $mod+b exec i3-sensible-terminal -e ranger
+bindsym $mod+Shift+b exec --no-startup-id nautilus
+
 bindsym $mod+m exec --no-startup-id mailspring
 
 bindsym $mod+Shift+x exec --no-startup-id ~/.scripts/betterlockscreen -l dim
@@ -121,6 +124,9 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# screenshots
+bindsym Print exec --no-startup-id gnome-screenshot -i
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -219,7 +225,7 @@ set $volumepath ~/.scripts
 
 # Command for the status line (used with -t, requires -u)
 #   ie: i3blocks, i3status
-set $statuscmd i3status
+set $statuscmd i3blocks
 
 # Signal used to update the status line (used with -u, requires -t)
 #   i3blocks uses SIGRTMIN+10 by default
