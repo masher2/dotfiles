@@ -1,4 +1,4 @@
-#!/bin/bash
+#ranger !/bin/bash
 
 # This scripts supposedly replicates my setup on a new machine, it is not yet tested.
 
@@ -33,7 +33,14 @@ sudo -v # Initial sudo to avoid asking for the password again
 sudo apt upgrade
 
 # Install basic programs
-sudo apt install vim ranger htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev postgresql 
+sudo apt install vim htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev postgresql 
+
+# Ranger
+git clone https://github.com/ranger/ranger.git
+cd ranger
+sudo make install
+cd ..
+sudo rm -rf ranger
 
 # Install snaps
 sudo snap install mailspring telegram-desktop brave libreoffice
