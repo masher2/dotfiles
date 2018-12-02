@@ -50,7 +50,7 @@ font pango:Hack 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 ##################################################
 # Q W E R T Y U I O P
@@ -98,7 +98,7 @@ bindsym $mod+Shift+l move right
 ##################################################
 # Z X C V B N M
 
-bindsym $mod+b exec i3-sensible-terminal -e ranger
+bindsym $mod+b exec urxvt -e ranger
 bindsym $mod+Shift+b exec --no-startup-id nautilus
 
 bindsym $mod+m exec --no-startup-id mailspring
