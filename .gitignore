@@ -1,0 +1,9 @@
+.vim/bundle/
+.vim/.netrwhist
+
+.config/ranger/bookmarks
+.config/ranger/history
+.config/ranger/tagged
+
+notes.md
+
