@@ -32,8 +32,12 @@ sudo -v # Initial sudo to avoid asking for the password again
 
 sudo apt upgrade
 
+# Add repositories
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo add-apt-repository -u ppa:neovim-ppa/stable
+
 # Install basic programs
-sudo apt install rxvt-unicode vim htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev postgresql 
+sudo apt install rxvt-unicode vim neovim htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev postgresql 
 
 # Ranger
 git clone https://github.com/ranger/ranger.git
@@ -48,8 +52,6 @@ sudo snap install --classic skype heroku
 
 #######################################
 # ARC THEME
-sudo add-apt-repository -u ppa:snwh/ppa
-
 sudo apt install arc-theme moka-icon-theme
 
 git clone https://github.com/horst3180/arc-icon-theme --depth 1
