@@ -64,8 +64,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+r mode "resize"
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec --no-startup-id rstudio
 
 bindsym $mod+t exec --no-startup-id telegram-desktop
 
@@ -82,6 +81,10 @@ bindsym $mod+d exec dmenu_run
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# Download managers
+bindsym $mod+g exec --no-startup-id uget-gtk
+bindsym $mod+Shift+g exec --no-startup-id transmission-gtk
 
 # change focus
 bindsym $mod+h focus left
@@ -133,6 +136,12 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+##################################################
+# F keys
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+F5 restart
 
 ##################################################
 # Environments
