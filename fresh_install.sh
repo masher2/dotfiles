@@ -39,6 +39,12 @@ sudo add-apt-repository -u ppa:neovim-ppa/stable
 # Install basic programs
 sudo apt install rxvt-unicode vim neovim htop tree tig redshift synaptic unrar r-base gdebi wget libevent-dev libncurses6-dev bison libncurses5-dev libncursesw5-dev libxml2-dev libzip-dev postgresql 
 
+# Kitty terminal
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+ln -s ~/.local/kitty.app/bin/kitty ~/.local/bin/
+ln -s ~/.local/kitty.app/share/man/man1/kitty.1 /usr/share/man/man1/
+ln -s ~/.local/kitty.app/share/terminfo/x/xterm-kitty /usr/share/terminfo/x/
+
 # Ranger
 git clone https://github.com/ranger/ranger.git
 cd ranger
