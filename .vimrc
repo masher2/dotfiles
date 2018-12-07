@@ -56,13 +56,13 @@ nnoremap <silent> <C-L> :TmuxNavigateRight<CR>
 
 
 " Tab navigation
-nnoremap h :tabprevious<CR>
-nnoremap l :tabnext<CR>
+nnoremap <M-h> :tabprevious<CR>
+nnoremap <M-l> :tabnext<CR>
 
 
 " Arrow navigation
-nnoremap k H3k
-nnoremap j L3j
+nnoremap <M-k> <C-u>
+nnoremap <M-j> <C-d>
 nnoremap <Up> H3k
 nnoremap <Down> L3j
 
