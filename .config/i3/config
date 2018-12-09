@@ -50,7 +50,7 @@ font pango:Hack 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty
 
 ##################################################
 # Q W E R T Y U I O P
@@ -101,7 +101,7 @@ bindsym $mod+Shift+l move right
 ##################################################
 # Z X C V B N M
 
-bindsym $mod+b exec urxvt -e ranger
+bindsym $mod+b exec kitty -e ranger
 bindsym $mod+Shift+b exec --no-startup-id nautilus
 
 bindsym $mod+m exec --no-startup-id mailspring
