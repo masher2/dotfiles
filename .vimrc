@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-vinegar'              " Explorer enhance
 Plugin 'tweekmonster/django-plus.vim'   " Django Plugin
 Plugin 'plasticboy/vim-markdown'        " Markdown plugin
+Plugin 'jalvesaq/Nvim-R'                " R plugin
 
 call vundle#end()
 filetype plugin indent on
@@ -63,8 +64,6 @@ nnoremap <M-l> :tabnext<CR>
 " Arrow navigation
 nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
-nnoremap <Up> H3k
-nnoremap <Down> L3j
 
 
 syntax on

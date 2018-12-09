@@ -83,7 +83,7 @@ export PATH=$PATH:$HOME/.Rscripts
 export PATH=$PATH:$HOME/.pyscripts
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/bin
-export EDITOR="vim"
+export EDITOR="nvim"
 export BROWSER="firefox"
 
 
@@ -92,3 +92,5 @@ export BROWSER="firefox"
 if [[ \$TMUX ]]; then
     source ~/.tmux/tmux-git.sh;
 fi
+
+alias slack="cd Documents/Jesus/sclack && actenv && ./app.py"
