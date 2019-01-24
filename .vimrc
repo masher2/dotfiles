@@ -15,6 +15,9 @@ Plugin 'tpope/vim-vinegar'              " Explorer enhance
 Plugin 'tweekmonster/django-plus.vim'   " Django Plugin
 Plugin 'plasticboy/vim-markdown'        " Markdown plugin
 Plugin 'jalvesaq/Nvim-R'                " R plugin
+Plugin 'ledger/vim-ledger'              " Ledger plugin
+Plugin 'rcaputo/vim-ledger_x'           " Ledger plugin extension
+Plugin 'python-mode/python-mode'        " Python plugin
 
 call vundle#end()
 filetype plugin indent on
@@ -30,12 +33,11 @@ nnoremap <leader>\ :vsp **/*
 
 
 " Screen
-colorscheme masher
+colorscheme shine
+
 set number
 set relativenumber
 set showcmd
-set background=dark "This is for getting my colors right on tmux
-set t_Co=256        "This is for getting my colors right on tmux
 
 
 " Diff options
@@ -88,3 +90,14 @@ set autoindent
 " File browser
 let g:netrw_liststyle=3
 
+" Don't replace _ with <- 
+let g:R_assign=0
+
+" Python 3 syntax
+let g:pymode_python = 'python3'
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_signs = 0
+let g:pymode_options = 0
+nnoremap <M-J> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
+nnoremap <M-K> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
+autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
