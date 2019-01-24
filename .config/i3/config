@@ -59,6 +59,7 @@ bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
 bindsym $mod+w exec --no-startup-id firefox
+bindsym $mod+Shift+w exec --no-startup-id firefox --private-window
 
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -74,7 +75,7 @@ bindsym $mod+t exec --no-startup-id telegram-desktop
 bindsym $mod+a focus parent
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+s layout tabbed
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -97,6 +98,13 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+
+# resize window
+bindsym $mod+Ctrl+h exec --no-startup-id ~/.scripts/i3resize left
+bindsym $mod+Ctrl+j exec --no-startup-id ~/.scripts/i3resize down
+bindsym $mod+Ctrl+k exec --no-startup-id ~/.scripts/i3resize up
+bindsym $mod+Ctrl+l exec --no-startup-id ~/.scripts/i3resize right
+
 
 ##################################################
 # Z X C V B N M
@@ -142,6 +150,8 @@ bindsym $mod+space focus mode_toggle
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+F5 restart
+
+bindsym $mod+F7 exec /home/masher2/.scripts/passmenu
 
 ##################################################
 # Environments
