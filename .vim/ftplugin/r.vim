@@ -1,11 +1,11 @@
 " R tmux
 let R_source = '~/.vim/bundle/Nvim-R/R/tmux_split.vim'
 let R_csv_delim = ','
-let R_csv_app = 'tmux split-window csv_dispatcher.sh'
+let R_csv_app = 'tmux split-window scim_or_calc'
 
 " Pipes and assignments
 imap <M-m> %>%
-let R_assign_map = <M-->
+imap <M--> <-
 
 " Running code as in RStudio
 nmap <buffer>  \d
