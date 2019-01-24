@@ -8,7 +8,7 @@ endif
 runtime colors/ron.vim
 
 "Override the name of the base colorscheme with the name of this custom one
-let g:colors_name = "masher"
+let g:colors_name = "shine"
 
 "Clear the colors for any items that you don't like
 hi clear StatusLine
