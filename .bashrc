@@ -79,17 +79,14 @@ fi
 
 #######################################
 # PATH
-export PATH=$PATH:$HOME/.Rscripts
-export PATH=$PATH:$HOME/.pyscripts
 export PATH=$PATH:$HOME/.scripts
-export PATH=$PATH:$HOME/bin
 export EDITOR="nvim"
 export BROWSER="firefox"
 
 
 #######################################
 # Enable tmux-git
-if [[ \$TMUX ]]; then
+if [[ $TMUX ]]; then
     source ~/.tmux/tmux-git.sh;
 fi
 
