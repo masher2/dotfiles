@@ -86,18 +86,41 @@ set expandtab
 set shiftround
 set autoindent
 
-
 " File browser
 let g:netrw_liststyle=3
 
-" Don't replace _ with <- 
-let g:R_assign=0
 
-" Python 3 syntax
+"================================================
+" R options and mappings
+let g:R_assign = 0
+let R_source = '~/.vim/bundle/Nvim-R/R/tmux_split.vim'
+let R_csv_delim = ','
+let R_csv_app = 'tmux split-window scim_or_calc'
+
+" Abbreviations
+" TODO: Use vim abbreviations
+autocmd FileType r imap <buffer> <M-m> %>%
+autocmd FileType r imap <buffer> <M--> <-
+
+" Running R code
+autocmd FileType r nmap <buffer>  \d
+autocmd FileType r nmap <buffer> <M-CR> \pp
+autocmd FileType r vmap <buffer> <M-CR> \ss
+
+" R help
+autocmd FileType r nmap <buffer> <F1> \rh
+autocmd FileType rdoc setlocal nofoldenable
+
+
+"================================================
+" Python options and mappings
 let g:pymode_python = 'python3'
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_signs = 0
-let g:pymode_options = 0
-nnoremap <M-J> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
-nnoremap <M-K> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
+let g:pymode_options_colorcolumn = 0
+
+autocmd FileType python setlocal wrap
+autocmd FileType python nnoremap <buffer> <M-J> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
+autocmd FileType python nnoremap <buffer> <M-K> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
+
 autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
