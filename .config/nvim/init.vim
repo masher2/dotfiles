@@ -18,8 +18,11 @@ tnoremap <silent> <C-H> <C-\><C-n>:TmuxNavigateLeft<CR>
 tnoremap <silent> <C-J> <C-\><C-n>:TmuxNavigateDown<CR>
 tnoremap <silent> <C-K> <C-\><C-n>:TmuxNavigateUp<CR>
 tnoremap <silent> <C-L> <C-\><C-n>:TmuxNavigateRight<CR>
+tnoremap <M-h> <C-\><C-n>:tabprevious<CR>
+tnoremap <M-l> <C-\><C-n>:tabnext<CR>
 
 " Exiting terminal mode
 tnoremap <C-Space> <C-\><C-n>
 
+" Enter terminal in terminal mode
 autocmd BufEnter term://* :startinsert
