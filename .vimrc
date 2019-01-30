@@ -13,7 +13,8 @@ Plugin 'tpope/vim-commentary'           " Comments
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-vinegar'              " Explorer enhance
 Plugin 'tweekmonster/django-plus.vim'   " Django Plugin
-Plugin 'plasticboy/vim-markdown'        " Markdown plugin
+" Plugin 'plasticboy/vim-markdown'        " Markdown plugin
+Plugin 'vim-pandoc/vim-pandoc-syntax'   " Markdown plugin
 Plugin 'jalvesaq/Nvim-R'                " R plugin
 Plugin 'ledger/vim-ledger'              " Ledger plugin
 Plugin 'rcaputo/vim-ledger_x'           " Ledger plugin extension
@@ -89,6 +90,7 @@ set autoindent
 " File browser
 let g:netrw_liststyle=3
 
+autocmd FileType markdown setlocal filetype=markdown.pandoc
 
 "================================================
 " R options and mappings
