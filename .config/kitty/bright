@@ -1,7 +1,8 @@
-# vim fileencoding=utf-8 ft=conf foldmethod=marker
+#: REPLACE SECTION
 foreground #657b83
 background #fdf6e3
 cursor     #586e75
+cursor_text_color #93a1a1
 
 color0  #eee8d5
 color1  #dc322f
@@ -19,3 +20,4 @@ color12 #657b83
 color13 #6c71c4
 color14 #586e75
 color15 #002b36
+#: END REPLACE SECTION
