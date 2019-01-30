@@ -95,23 +95,27 @@ autocmd FileType markdown setlocal filetype=markdown.pandoc
 "================================================
 " R options and mappings
 let g:R_assign = 0
-let R_source = '~/.vim/bundle/Nvim-R/R/tmux_split.vim'
 let R_csv_delim = ','
 let R_csv_app = 'tmux split-window scim_or_calc'
+let R_nvim_wd = 1
+let r_syntax_folding = 1
 
 " Abbreviations
 " TODO: Use vim abbreviations
-autocmd FileType r imap <buffer> <M-m> %>%
-autocmd FileType r imap <buffer> <M--> <-
+autocmd FileType R,r,rmd imap <buffer> <M-m> %>%
+autocmd FileType R,r,rmd imap <buffer> <M--> <-
 
 " Running R code
-autocmd FileType r nmap <buffer>  \d
-autocmd FileType r nmap <buffer> <M-CR> \pp
-autocmd FileType r vmap <buffer> <M-CR> \ss
+autocmd FileType R,r,rmd nmap <buffer>  \d
+autocmd FileType R,r,rmd nmap <buffer> <M-CR> \pp
+autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
+autocmd FileType rmd nmap <buffer> <M-CR> \cc
 
 " R help
-autocmd FileType r nmap <buffer> <F1> \rh
-autocmd FileType rdoc setlocal nofoldenable
+autocmd FileType R,r,rmd nmap <buffer> <F1> \rh
+autocmd FileType Rdoc,rdoc setlocal nofoldenable
+autocmd FileType rmd setlocal commentstring=#\ %s
+" autocmd FileType R,r,rmd setlocal nofoldenable
 
 
 "================================================
