@@ -5,13 +5,13 @@
 " This color scheme uses a light grey background.
 
 " First remove all existing highlighting.
-set background=light
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
 
 let colors_name = "bright"
+set background=light
 
 hi clear DiffAdd
 hi clear DiffChange
@@ -68,6 +68,8 @@ hi TabLineFill  ctermfg=0 cterm=NONE
 "   hi Statement cterm=bold ctermfg=Brown gui=bold guifg=Brown
 " endif
 " hi Ignore ctermfg=LightGrey guifg=grey90
+hi IndentGuidesOdd  ctermbg=8
+hi IndentGuidesEven ctermbg=0
 
 " vim: sw=2
 

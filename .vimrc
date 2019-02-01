@@ -6,19 +6,20 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'           " Vundle
-Plugin 'christoomey/vim-tmux-navigator' " Move between tmux and vim easily
-Plugin 'tpope/vim-fugitive'             " Git plugin 
-Plugin 'tpope/vim-commentary'           " Comments
-Plugin 'tpope/vim-surround'             " Surrounding text
-Plugin 'tpope/vim-vinegar'              " Explorer enhance
-Plugin 'tweekmonster/django-plus.vim'   " Django Plugin
+Plugin 'VundleVim/Vundle.vim'            " Vundle
+Plugin 'christoomey/vim-tmux-navigator'  " Move between tmux and vim easily
+Plugin 'tpope/vim-fugitive'              " Git plugin 
+Plugin 'tpope/vim-commentary'            " Comments
+Plugin 'tpope/vim-surround'              " Surrounding text
+Plugin 'tpope/vim-vinegar'               " Explorer enhance
+Plugin 'tweekmonster/django-plus.vim'    " Django Plugin
 " Plugin 'plasticboy/vim-markdown'        " Markdown plugin
-Plugin 'vim-pandoc/vim-pandoc-syntax'   " Markdown plugin
-Plugin 'jalvesaq/Nvim-R'                " R plugin
-Plugin 'ledger/vim-ledger'              " Ledger plugin
-Plugin 'mboughaba/i3config.vim'         " i3config syntax highlighting
-Plugin 'python-mode/python-mode'        " Python plugin
+Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown plugin
+Plugin 'jalvesaq/Nvim-R'                 " R plugin
+Plugin 'ledger/vim-ledger'               " Ledger plugin
+Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
+Plugin 'python-mode/python-mode'         " Python plugin
+Plugin 'nathanaelkane/vim-indent-guides' " Show indenting
 
 call vundle#end()
 filetype plugin indent on
@@ -34,7 +35,7 @@ nnoremap <leader>\ :vsp **/*
 
 
 " Screen
-colorscheme shine
+colorscheme bright
 
 set number
 set relativenumber
@@ -88,7 +89,7 @@ set shiftround
 set autoindent
 
 " File browser
-let g:netrw_liststyle=3
+let g:netrw_liststyle = 3
 
 autocmd FileType markdown setlocal filetype=markdown.pandoc
 
@@ -129,4 +130,13 @@ autocmd FileType python setlocal wrap
 autocmd FileType python nnoremap <buffer> <M-J> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
 autocmd FileType python nnoremap <buffer> <M-K> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
 
+"================================================
+" Django templates options and mappings
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+
 autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
+autocmd FileType html,htmldjango setlocal nofoldenable
+autocmd FileType html,htmldjango setlocal foldnestmax=30
+autocmd FileType html,htmldjango :IndentGuidesEnable

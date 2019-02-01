@@ -9,6 +9,7 @@ runtime colors/ron.vim
 
 "Override the name of the base colorscheme with the name of this custom one
 let g:colors_name = "shine"
+set background=dark
 
 "Clear the colors for any items that you don't like
 hi clear StatusLine
@@ -32,3 +33,5 @@ highlight DiffAdd    cterm=NONE ctermfg=15 ctermbg=22
 highlight DiffDelete cterm=NONE ctermfg=15 ctermbg=88
 highlight DiffChange cterm=NONE ctermfg=15 ctermbg=17
 highlight DiffText   cterm=NONE ctermfg=15 ctermbg=27
+hi IndentGuidesOdd  ctermbg=10
+hi IndentGuidesEven ctermbg=11
