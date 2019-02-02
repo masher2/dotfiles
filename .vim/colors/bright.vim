@@ -3,6 +3,7 @@
 " Last Change:	2006 Apr 15
 
 " This color scheme uses a light grey background.
+set background=light
 
 " First remove all existing highlighting.
 hi clear
@@ -10,8 +11,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "bright"
-set background=light
+let g:colors_name = "bright"
 
 hi clear DiffAdd
 hi clear DiffChange
