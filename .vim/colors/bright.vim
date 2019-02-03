@@ -37,8 +37,8 @@ hi DiffDelete   cterm=NONE ctermbg=Red ctermfg=15
 hi DiffText     cterm=NONE ctermbg=LightCyan ctermfg=15
 " hi Directory    ctermfg=DarkBlue guifg=Blue
 " hi ErrorMsg     ctermfg=White ctermbg=DarkRed guibg=Red guifg=White
-hi FoldColumn   ctermbg=Grey ctermfg=DarkBlue guibg=Grey guifg=DarkBlue
-hi Folded       ctermbg=Grey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
+hi FoldColumn   ctermbg=0 ctermfg=12
+hi Folded       ctermbg=0 ctermfg=12
 " hi IncSearch    cterm=reverse gui=reverse
 " hi LineNr       ctermfg=Brown guifg=Brown
 " hi ModeMsg      cterm=bold gui=bold
@@ -46,15 +46,15 @@ hi Folded       ctermbg=Grey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
 " hi NonText      ctermfg=Blue gui=bold guifg=Blue guibg=grey80
 " hi Normal ctermfg=White guifg=Black guibg=grey90
 " hi Question     ctermfg=DarkGreen gui=bold guifg=SeaGreen
-hi Search       cterm=reverse 
+hi Search       ctermbg=8
 " hi SpecialKey   ctermfg=DarkBlue guifg=Blue
 " hi Title        ctermfg=DarkMagenta gui=bold guifg=Magenta
-hi StatusLine   cterm=reverse ctermfg=14 ctermbg=0 
-hi StatusLineNC ctermfg=10 ctermbg=0
-hi VertSplit    ctermfg=0 ctermbg=10 cterm=NONE
-hi TabLine      ctermbg=0 ctermfg=14 cterm=NONE
-hi TabLineFill  ctermfg=0 cterm=NONE
-" hi TabLineSel   ctermbg=235 ctermfg=255
+hi StatusLine   cterm=reverse ctermbg=0 ctermfg=14
+hi StatusLineNC ctermbg=0 ctermfg=14
+hi VertSplit    cterm=NONE ctermbg=0 ctermfg=14
+hi TabLine      cterm=NONE ctermbg=NONE ctermfg=14
+hi TabLineFill  cterm=NONE ctermbg=NONE
+hi TabLineSel   cterm=NONE ctermbg=8 ctermfg=14
 " hi Visual       ctermbg=grey guibg=grey80
 " hi VisualNOS    cterm=underline,bold gui=underline,bold
 " hi WarningMsg   ctermfg=DarkRed guifg=Red
@@ -72,4 +72,3 @@ hi IndentGuidesOdd  ctermbg=8
 hi IndentGuidesEven ctermbg=0
 
 " vim: sw=2
-

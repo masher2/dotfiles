@@ -1,7 +1,7 @@
 "these lines are suggested to be at the top of every colorscheme
 hi clear
 if exists("syntax_on")
-  syntax reset
+    syntax reset
 endif
 
 "Load the 'base' colorscheme - the one you want to alter

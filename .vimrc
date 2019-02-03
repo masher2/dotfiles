@@ -35,7 +35,7 @@ nnoremap <leader>\ :vsp **/*
 
 
 " Screen
-colorscheme bright
+colorscheme shine
 
 set number
 set relativenumber
