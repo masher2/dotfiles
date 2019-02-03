@@ -1,0 +1,50 @@
+# Theme changer config file
+#
+# The config consists of a header and a list of images' basenames indented by
+# 4 spaces. The headers are "bright" for wallpapers to match with the light
+# theme and "shine" for the wallpapers to match with the dark theme, and must be
+# a blank line after the last filename.
+# 
+# The config is formatted as follows:
+# header:
+#     wallpaper.png
+#     wallpaper 2.jpg
+#
+
+bright:
+    island.png
+    aesthetic sea.png
+    buildings.png
+    champloo.png
+    desert.png
+    kokoro.png
+    mountain sky.png
+    nowhere 2.png
+    prarie.png
+    sad sunset.png
+    space kiss 2.png
+    space kiss.png
+    sunset skyline.png
+    wallpaper.png
+
+shine:
+    island 2.png
+    arab dream.png
+    blackhole.png
+    buildings.png
+    empty void.png
+    jesus.png
+    miss you 1.png
+    miss you 2.png
+    missing you.png
+    night tempo.png
+    nowhere 1.png
+    nowhere 2.png
+    religious 1.png
+    religious 2.png
+    sadness beach.png
+    stars 1.png
+    stars 2.png
+    wallpaper.png
+    waste of space.png
+
