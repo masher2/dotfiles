@@ -79,7 +79,7 @@ fi
 
 #######################################
 # PATH
-export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/scripts
 export EDITOR="nvim"
 export BROWSER="firefox"
 

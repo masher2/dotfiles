@@ -27,9 +27,11 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.scripts" ] ; then
-    PATH="$HOME/.scripts:$PATH"
+if [ -d "$HOME/scripts" ] ; then
+    PATH="$HOME/scripts:$PATH"
 fi
 
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR="nvim"
 export BROWSER="firefox"

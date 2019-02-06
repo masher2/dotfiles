@@ -1,6 +1,6 @@
 # Python virtual environments
-if [[ -f ~/.scripts/venv_utils.sh ]]; then
-    source ~/.scripts/venv_utils.sh;
+if [[ -f ~/scripts/venv_utils.sh ]]; then
+    source ~/scripts/venv_utils.sh;
 fi
 
 # Django commands
