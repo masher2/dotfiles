@@ -17,6 +17,7 @@ Plugin 'tweekmonster/django-plus.vim'    " Django Plugin
 Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown plugin
 Plugin 'jalvesaq/Nvim-R'                 " R plugin
 Plugin 'ledger/vim-ledger'               " Ledger plugin
+Plugin 'rcaputo/vim-ledger_x'            " Ledger plugin
 Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
 Plugin 'nathanaelkane/vim-indent-guides' " Show indenting
