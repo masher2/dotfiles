@@ -102,16 +102,16 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # resize window
-bindsym $mod+Ctrl+h exec --no-startup-id ~/.scripts/i3resize left
-bindsym $mod+Ctrl+j exec --no-startup-id ~/.scripts/i3resize down
-bindsym $mod+Ctrl+k exec --no-startup-id ~/.scripts/i3resize up
-bindsym $mod+Ctrl+l exec --no-startup-id ~/.scripts/i3resize right
+bindsym $mod+Ctrl+h exec --no-startup-id ~/scripts/i3resize left
+bindsym $mod+Ctrl+j exec --no-startup-id ~/scripts/i3resize down
+bindsym $mod+Ctrl+k exec --no-startup-id ~/scripts/i3resize up
+bindsym $mod+Ctrl+l exec --no-startup-id ~/scripts/i3resize right
 
 
 ##################################################
 # Z X C V B N M
 
-bindsym $mod+Shift+x exec --no-startup-id ~/.scripts/betterlockscreen -l dim
+bindsym $mod+Shift+x exec --no-startup-id ~/scripts/betterlockscreen -l dim
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -158,7 +158,7 @@ bindsym $mod+space focus mode_toggle
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+F5 restart
 
-bindsym $mod+F7 exec /home/masher2/.scripts/passmenu
+bindsym $mod+F7 exec passmenu
 
 ##################################################
 # Environments
@@ -293,4 +293,4 @@ bindsym XF86KbdBrightnessDown exec light -Urs 'sysfs/leds/asus::kbd_backlight' 1
 #         Option "ScrollMethod" "twofinger"
 #         Option "Tapping" "off"
 # EndSection
-bindsym XF86TouchpadToggle exec ~/.scripts/toggletouchpad.sh
+bindsym XF86TouchpadToggle exec ~/scripts/toggletouchpad.sh
