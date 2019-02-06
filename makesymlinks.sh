@@ -4,9 +4,9 @@
 
 ########## Variables
 
-dir=~/.dotfiles                    # .dotfiles directory
+dir=~/dotfiles                    # .dotfiles directory
 olddir=~/.dotfiles_old             # old .dotfiles backup directory
-files=".bashrc .bash_aliases .vim .vimrc .tmux .tmux.conf .config/i3 .config/ranger .config/kitty .config/nvim .config/theme_changer .Rprofile .Xresources .profile"    # list of files/folders to symlink in homedir
+files=".bashrc .bash_aliases .vim .vimrc .tmux .tmux.conf .config/i3 .config/ranger .config/redshift .config/kitty .config/nvim .config/theme_changer .Rprofile .Xresources .profile"    # list of files/folders to symlink in homedir
 
 ##########
 
