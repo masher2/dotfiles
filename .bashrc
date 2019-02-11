@@ -85,6 +85,10 @@ export BROWSER="firefox"
 
 
 #######################################
+# Environment variables
+export PYTHONBREAKPOINT='ipdb.set_trace'
+
+#######################################
 # Enable tmux-git
 if [[ $TMUX ]]; then
     source ~/.tmux/tmux-git.sh;
