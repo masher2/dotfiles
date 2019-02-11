@@ -2,6 +2,7 @@
 if [[ -f ~/scripts/venv_utils.sh ]]; then
     source ~/scripts/venv_utils.sh;
 fi
+alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 
 # Django commands
 alias runserver='python manage.py runserver'
