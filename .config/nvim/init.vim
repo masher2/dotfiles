@@ -23,6 +23,7 @@ tnoremap <M-l> <C-\><C-n>:tabnext<CR>
 
 " Exiting terminal mode
 tnoremap <C-Space> <C-\><C-n>
+nnoremap <C-Space> <Esc>
 
 " Enter terminal in terminal mode
 autocmd BufEnter term://* :startinsert
