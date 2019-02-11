@@ -25,7 +25,7 @@ set $term --no-startup-id kitty -1 --listen-on unix:/tmp/kitty
 exec --no-startup-id /home/masher2/.fehbg
 exec --no-startup-id clipit
 exec --no-startup-id compton
-exec --no-startup-id dropbox start
+exec --no-startup-id dropboxd
 exec --no-startup-id mailspring
 exec --no-startup-id nm-applet
 exec --no-startup-id onedrived start
@@ -124,10 +124,13 @@ bindsym $mod+Shift+c reload
 bindsym $mod+v exec via
 
 bindsym $mod+b exec $term -e ranger
-bindsym $mod+Shift+b exec --no-startup-id nautilus
+bindsym $mod+Shift+b exec --no-startup-id pcmanfm
+
+bindsym $mod+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere
+bindsym $mod+Shift+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere -c
 
 bindsym $mod+m exec --no-startup-id mailspring
-bindsym $mod+Sihft+m exec pavucontrol
+bindsym $mod+Shift+m exec pavucontrol
 
 ##################################################
 # Other Keys
@@ -213,6 +216,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 for_window [class="R_x11"] floating enable
 for_window [class="Gnome-calculator"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="vim-anywhere"] floating enable
+
+assign [class="Mailspring"] $ws5
 
 ##################################################
 # Modes
