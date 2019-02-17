@@ -13,14 +13,14 @@ Plugin 'tpope/vim-commentary'            " Comments
 Plugin 'tpope/vim-surround'              " Surrounding text
 Plugin 'tpope/vim-vinegar'               " Explorer enhance
 Plugin 'tweekmonster/django-plus.vim'    " Django Plugin
-" Plugin 'plasticboy/vim-markdown'        " Markdown plugin
-Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown plugin
+Plugin 'plasticboy/vim-markdown'        " Markdown plugin
+" Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown plugin
 Plugin 'jalvesaq/Nvim-R'                 " R plugin
 Plugin 'ledger/vim-ledger'               " Ledger plugin
 Plugin 'rcaputo/vim-ledger_x'            " Ledger plugin
 Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
-Plugin 'nathanaelkane/vim-indent-guides' " Show indenting
+Plugin 'Yggdroot/indentLine'             " Show indenting
 
 call vundle#end()
 filetype plugin indent on
@@ -77,8 +77,10 @@ syntax on
 " Folding
 set foldmethod=indent
 set foldnestmax=3
-set foldenable "Start with the folded code
+set foldenable        " Start with the folded code
 set foldlevel=0
+nnoremap <Space> za   " Unfold 1 level
+nnoremap <M-Space> zA " Unfold recursively
 
 
 " Indent
@@ -133,11 +135,11 @@ autocmd FileType python nnoremap <buffer> <M-K> :call pymode#motion#move('^\s*\(
 
 "================================================
 " Django templates options and mappings
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_auto_colors = 0
+let g:indentLine_enabled = 0
+let g:indentLine_char = '▏'
+nnoremap <leader>il :IndentLinesToggle<CR>
 
 autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
 autocmd FileType html,htmldjango setlocal nofoldenable
 autocmd FileType html,htmldjango setlocal foldnestmax=30
-autocmd FileType html,htmldjango :IndentGuidesEnable
+autocmd FileType html,htmldjango :IndentLinesToggle
