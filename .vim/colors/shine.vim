@@ -11,7 +11,11 @@ runtime colors/ron.vim
 let g:colors_name = "shine"
 set background=dark
 
-"Clear the colors for any items that you don't like
+" Clear highlight groups -----------------------------------------------
+hi clear Search
+hi clear CursorLine
+hi clear Folded
+
 hi clear StatusLine
 hi clear StatusLineNC
 hi clear VertSplit 
@@ -19,19 +23,29 @@ hi clear TabLine
 hi clear TabLineFill 
 hi clear TabLineSel 
 
-"Set up your new & improved colors
+hi clear DiffAdd
+hi clear DiffChange
+hi clear DiffDelete
+hi clear DiffText
 
+"
+" Add highlighting ----------------------------------------------------
+hi Search       ctermbg=8
+hi CursorLine   cterm=NONE ctermbg=0
+hi Folded       ctermbg=0 ctermfg=12
+
+" Status line ----------------------------------------------------------
 hi StatusLine   ctermbg=44 ctermfg=233
 hi StatusLineNC ctermbg=238 ctermfg=44
-hi VertSplit    ctermbg=234 ctermfg=240
+hi VertSplit    ctermbg=NONE ctermfg=240
+
+" Tab line -------------------------------------------------------------
 hi TabLine      ctermbg=233 ctermfg=250
 hi TabLineFill  ctermbg=232
 hi TabLineSel   ctermbg=235 ctermfg=255
 
-" Sane diff colors
+" Diffs ----------------------------------------------------------------
 highlight DiffAdd    cterm=NONE ctermfg=15 ctermbg=22
 highlight DiffDelete cterm=NONE ctermfg=15 ctermbg=88
 highlight DiffChange cterm=NONE ctermfg=15 ctermbg=17
 highlight DiffText   cterm=NONE ctermfg=15 ctermbg=27
-hi IndentGuidesOdd  ctermbg=10
-hi IndentGuidesEven ctermbg=11
