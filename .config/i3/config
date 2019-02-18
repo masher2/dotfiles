@@ -134,6 +134,8 @@ bindsym $mod+Shift+m exec pavucontrol
 
 ##################################################
 # Other Keys
+bindsym $mod+grave exec --no-startup-id ddspawn servers
+
 # split in horizontal orientation
 bindsym $mod+backslash split h
 
@@ -221,6 +223,13 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="vim-anywhere"] floating enable
 for_window [class="vim-anywhere"] resize set 800 500
 for_window [class="vim-anywhere"] move position center
+
+for_window [class="dropdown_servers"] floating enable
+for_window [class="dropdown_servers"] move scratchpad
+for_window [class="dropdown_servers"] sticky enable
+for_window [class="dropdown_servers"] scratchpad show
+for_window [class="dropdown_servers"] resize set 800 800
+for_window [class="dropdown_servers"] move position center
 
 assign [class="Mailspring"] $ws5
 
