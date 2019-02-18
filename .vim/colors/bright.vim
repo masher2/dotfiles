@@ -27,10 +27,10 @@ hi clear TabLine
 hi clear TabLineFill
 hi clear TabLineSel
 
-hi Clear Pmenu
-hi Clear PmenuSel
-hi Clear PmenuSbar
-hi Clear PmenuThumb
+hi clear Pmenu
+hi clear PmenuSel
+hi clear PmenuSbar
+hi clear PmenuThumb
 
 hi clear DiffAdd
 hi clear DiffChange
