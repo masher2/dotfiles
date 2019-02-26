@@ -1,11 +1,18 @@
-# Python virtual environments
+# Python commands
 if [[ -f ~/scripts/venv_utils.sh ]]; then
     source ~/scripts/venv_utils.sh;
 fi
 alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
+alias tst='python -m unittest'
 
 # Django commands
-alias runserver='python manage.py runserver'
+runserver() {
+    if [[ -f manage.py ]]; then
+        python manage.py runserver
+    else
+        python app.py
+    fi
+}
 alias dshell='python manage.py shell'
 alias migrate='python manage.py migrate'
 alias dj='python manage.py'
