@@ -103,7 +103,7 @@ i_betterlockscreen() {
     # Add --composite flag to the lock call to avoid problems with compton
     git clone https://github.com/pavanjadhaw/betterlockscreen
     cd betterlockscreen
-    mv betterlockscreen ~/.scripts/
+    mv betterlockscreen ~/scripts/
     cd ..
     rm -rf betterlockscreen
 }
