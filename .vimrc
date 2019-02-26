@@ -21,6 +21,7 @@ Plugin 'rcaputo/vim-ledger_x'            " Ledger plugin
 Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
 Plugin 'Yggdroot/indentLine'             " Show indenting
+Plugin 'masher2/readablefold.vim'        " Easier to read folding
 
 call vundle#end()
 filetype plugin indent on
@@ -79,8 +80,11 @@ set foldmethod=indent
 set foldnestmax=3
 set foldenable        " Start with the folded code
 set foldlevel=0
-nnoremap <Space> za   " Unfold 1 level
-nnoremap <M-Space> zA " Unfold recursively
+nnoremap <Space> za
+nnoremap <M-Space> zA
+let g:readablefold#foldlevel_char = '<'
+let g:readablefold#foldspace_char = ' '
+let g:readablefold#tabstop_char = '-'
 
 
 " Indent
