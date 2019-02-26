@@ -115,9 +115,9 @@ autocmd FileType R,r,rmd imap <buffer> <M--> <-
 
 " Running R code
 autocmd FileType R,r,rmd nmap <buffer>  \d
-autocmd FileType R,r,rmd nmap <buffer> <M-CR> \pp
-autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
+autocmd FileType R,r nmap <buffer> <M-CR> \pp
 autocmd FileType rmd nmap <buffer> <M-CR> \cc
+autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
 
 " R help
 autocmd FileType R,r,rmd nmap <buffer> <F1> \rh
