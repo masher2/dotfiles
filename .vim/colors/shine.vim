@@ -32,7 +32,7 @@ hi clear DiffText
 " Add highlighting ----------------------------------------------------
 hi Search       ctermbg=8
 hi CursorLine   cterm=NONE ctermbg=0
-hi Folded       ctermbg=0 ctermfg=12
+hi Folded       ctermbg=NONE ctermfg=4
 
 " Status line ----------------------------------------------------------
 hi StatusLine   ctermbg=44 ctermfg=233
