@@ -1,11 +1,13 @@
+" vim:foldmethod=marker
 set nocompatible
 filetype off
 
+" =====================================================
+" Plugins {{{
 
-" Vundle config
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'            " Vundle
 Plugin 'christoomey/vim-tmux-navigator'  " Move between tmux and vim easily
 Plugin 'tpope/vim-fugitive'              " Git plugin 
@@ -22,72 +24,38 @@ Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
 Plugin 'Yggdroot/indentLine'             " Show indenting
 Plugin 'masher2/readablefold.vim'        " Easier to read folding
-
 call vundle#end()
+
 filetype plugin indent on
 
+" }}}
 
-" Files navigation
-set path+=**
-set wildmenu
-nnoremap <leader>e :edit **/*
-nnoremap <leader>t :tabedit **/*
-nnoremap <leader>/ :sp **/*
-nnoremap <leader>\ :vsp **/*
+" =====================================================
+" UI {{{
 
-
-" Screen
 colorscheme shine
+syntax on
 
-set number
-set relativenumber
-set showcmd
-
-
-" Diff options
+" Vertical splits always
 set diffopt+=vertical
 
-
-" Extras
-set noswapfile
-set autoread
+" Split in sane directions
 set splitbelow
 set splitright
 
+" Line numbers
+set number
+set relativenumber
 
-" Split screen navigation
-nnoremap <silent> <C-H> :TmuxNavigateLeft<CR>
-nnoremap <silent> <C-J> :TmuxNavigateDown<CR>
-nnoremap <silent> <C-K> :TmuxNavigateUp<CR>
-nnoremap <silent> <C-L> :TmuxNavigateRight<CR>
+" Etc 
+set path+=**
+set wildmenu
+set showcmd
+set noswapfile
+set autoread
 
+" Indent {{{
 
-" Tab navigation
-nnoremap <M-h> :tabprevious<CR>
-nnoremap <M-l> :tabnext<CR>
-
-
-" Arrow navigation
-nnoremap <M-k> <C-u>
-nnoremap <M-j> <C-d>
-
-
-syntax on
-
-
-" Folding
-set foldmethod=indent
-set foldnestmax=3
-set foldenable        " Start with the folded code
-set foldlevel=0
-nnoremap <Space> za
-nnoremap <M-Space> zA
-let g:readablefold#foldlevel_char = '<'
-let g:readablefold#foldspace_char = ' '
-let g:readablefold#tabstop_char = '-'
-
-
-" Indent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -95,21 +63,60 @@ set expandtab
 set shiftround
 set autoindent
 
-" File browser
+let g:indentLine_enabled = 0
+let g:indentLine_char = '▏'
+
+"}}}
+
+" Folding {{{
+
+set foldenable
+set foldmethod=indent
+set foldnestmax=3
+set foldlevel=0
+
+" Readablefold characters
+let g:readablefold#foldlevel_char = '<'
+let g:readablefold#foldspace_char = ' '
+let g:readablefold#tabstop_char = '-'
+
+" }}}
+
+" Cursorline {{{
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
+" }}}
+
+" }}}
+
+" =====================================================
+" Plugin options and mappings {{{
+
+" Netrw {{{
+
 let g:netrw_liststyle = 3
 
-autocmd FileType markdown setlocal filetype=markdown.pandoc
+" }}}
 
-"================================================
-" R options and mappings
+" R {{{
+
+" Options {{{
+
 let g:R_assign = 0
 let R_csv_delim = ','
 let R_csv_app = 'tmux split-window scim_or_calc'
 let R_nvim_wd = 1
 let r_syntax_folding = 1
 
-" Abbreviations
-" TODO: Use vim abbreviations
+" }}}
+" Mappings {{{
+
+" Pipe and assign
 autocmd FileType R,r,rmd imap <buffer> <M-m> %>%
 autocmd FileType R,r,rmd imap <buffer> <M--> <-
 
@@ -119,31 +126,104 @@ autocmd FileType R,r nmap <buffer> <M-CR> \pp
 autocmd FileType rmd nmap <buffer> <M-CR> \cc
 autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
 
-" R help
+" }}}
+" R help {{{
+
 autocmd FileType R,r,rmd nmap <buffer> <F1> \rh
 autocmd FileType Rdoc,rdoc setlocal nofoldenable
 autocmd FileType rmd setlocal commentstring=#\ %s
-" autocmd FileType R,r,rmd setlocal nofoldenable
 
+" }}}
 
-"================================================
-" Python options and mappings
+" }}}
+
+" Python {{{
+
+" Options {{{
+
 let g:pymode_python = 'python3'
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_signs = 0
 let g:pymode_options_colorcolumn = 0
 
 autocmd FileType python setlocal wrap
+
+" }}}
+" Mappings {{{
+
 autocmd FileType python nnoremap <buffer> <M-J> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
 autocmd FileType python nnoremap <buffer> <M-K> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
 
-"================================================
-" Django templates options and mappings
-let g:indentLine_enabled = 0
-let g:indentLine_char = '▏'
-nnoremap <leader>il :IndentLinesToggle<CR>
+" }}}
+" Django {{{
 
 autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
 autocmd FileType html,htmldjango setlocal nofoldenable
 autocmd FileType html,htmldjango setlocal foldnestmax=30
-autocmd FileType html,htmldjango :IndentLinesToggle
+autocmd FileType html,htmldjango :IndentLinesEnable
+
+" }}}
+
+" }}}
+
+" }}}
+
+" =====================================================
+" Key bindings {{{
+
+" Unmodified keys {{{
+
+" Make `Y` congruent with `D` and `C`
+nnoremap Y y$
+
+" }}}
+
+" Leader {{{
+
+" Easier file navigation
+nnoremap <leader>e :edit **/*
+nnoremap <leader>t :tabedit **/*
+nnoremap <leader>/ :sp **/*
+nnoremap <leader>\ :vsp **/*
+
+" Easy copy to clipboard
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+
+" Toggle indent lines
+nnoremap <leader>il :IndentLinesToggle<CR>
+
+" }}}
+
+" Control {{{
+
+" Easy split navigation and tmux integration
+nnoremap <silent> <C-H> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-J> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-K> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-L> :TmuxNavigateRight<CR>
+
+" }}}
+
+" Alt {{{
+
+" Easy tab switching
+nnoremap <M-h> :tabprevious<CR>
+nnoremap <M-l> :tabnext<CR>
+
+" Easier scrolling
+nnoremap <M-k> <C-u>
+nnoremap <M-j> <C-d>
+
+" }}}
+
+" Other {{{
+
+" Easier folding
+nnoremap <Space> za
+nnoremap <M-Space> zA
+
+" }}}
+
+" }}}
+
