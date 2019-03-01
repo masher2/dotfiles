@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 " =====================================================
-" Plugins {{{
+" Plugins --------------------------------------------- {{{
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -31,7 +31,7 @@ filetype plugin indent on
 " }}}
 
 " =====================================================
-" UI {{{
+" UI -------------------------------------------------- {{{
 
 colorscheme shine
 syntax on
@@ -95,15 +95,15 @@ augroup END
 " }}}
 
 " =====================================================
-" Plugin options and mappings {{{
+" Plugin options and mappings ------------------------- {{{
 
-" Netrw {{{
+" Netrw ----------------------------------------------- {{{
 
 let g:netrw_liststyle = 3
 
 " }}}
 
-" R {{{
+" R --------------------------------------------------- {{{
 
 " Options {{{
 
@@ -137,7 +137,7 @@ autocmd FileType rmd setlocal commentstring=#\ %s
 
 " }}}
 
-" Python {{{
+" Python ---------------------------------------------- {{{
 
 " Options {{{
 
@@ -169,16 +169,16 @@ autocmd FileType html,htmldjango :IndentLinesEnable
 " }}}
 
 " =====================================================
-" Key bindings {{{
+" Key bindings ---------------------------------------- {{{
 
-" Unmodified keys {{{
+" Unmodified keys ------------------------------------- {{{
 
 " Make `Y` congruent with `D` and `C`
 nnoremap Y y$
 
 " }}}
 
-" Leader {{{
+" Leader ---------------------------------------------- {{{
 
 " Easier file navigation
 nnoremap <leader>e :edit **/*
@@ -195,7 +195,7 @@ nnoremap <leader>il :IndentLinesToggle<CR>
 
 " }}}
 
-" Control {{{
+" Control --------------------------------------------- {{{
 
 " Easy split navigation and tmux integration
 nnoremap <silent> <C-H> :TmuxNavigateLeft<CR>
@@ -205,7 +205,7 @@ nnoremap <silent> <C-L> :TmuxNavigateRight<CR>
 
 " }}}
 
-" Alt {{{
+" Alt ------------------------------------------------- {{{
 
 " Easy tab switching
 nnoremap <M-h> :tabprevious<CR>
@@ -217,7 +217,7 @@ nnoremap <M-j> <C-d>
 
 " }}}
 
-" Other {{{
+" Other ----------------------------------------------- {{{
 
 " Easier folding
 nnoremap <Space> za
