@@ -193,6 +193,27 @@ nnoremap <leader>Y "+Y
 " Toggle indent lines
 nnoremap <leader>il :IndentLinesToggle<CR>
 
+" Set folding levels
+noremap <leader>f0 :set foldlevel=0<CR>
+noremap <leader>f1 :set foldlevel=1<CR>
+noremap <leader>f2 :set foldlevel=2<CR>
+noremap <leader>f3 :set foldlevel=3<CR>
+noremap <leader>f4 :set foldlevel=4<CR>
+noremap <leader>f5 :set foldlevel=5<CR>
+noremap <leader>f6 :set foldlevel=6<CR>
+noremap <leader>f7 :set foldlevel=7<CR>
+noremap <leader>f8 :set foldlevel=8<CR>
+noremap <leader>f9 :set foldlevel=9<CR>
+
+" Git
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>ga :Gcommit --amend<CR>
+nnoremap <silent> <leader>gA :Gcommit --amend --no-edit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+
 " }}}
 
 " Control --------------------------------------------- {{{
