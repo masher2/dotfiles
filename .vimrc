@@ -206,7 +206,7 @@ noremap <leader>f8 :set foldlevel=8<CR>
 noremap <leader>f9 :set foldlevel=9<CR>
 
 " Git
-nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gg :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>ga :Gcommit --amend<CR>
