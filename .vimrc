@@ -212,7 +212,7 @@ nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>ga :Gcommit --amend<CR>
 nnoremap <silent> <leader>gA :Gcommit --amend --no-edit<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gp :Gpush<CR>
+nnoremap <leader>gp :Gpush<CR>
 
 " Window comands
 nnoremap <leader>w <C-w>
