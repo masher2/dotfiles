@@ -126,6 +126,24 @@ autocmd FileType R,r nmap <buffer> <M-CR> \pp
 autocmd FileType rmd nmap <buffer> <M-CR> \cc
 autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
 
+" Moving between function declarations
+" Got this from python-mode
+fun RFuncionMove(flags, ...) "{{{
+    let cnt = v:count1 - 1
+    let [line, column] = searchpos('^[A-z0-9_.]\+\s\=\(<-\|=\)\s\=function', a:flags . 'sW')
+    let indent = indent(line)
+    while cnt && line
+        let [line, column] = searchpos('^[A-z0-9_.]\+\s\=\(<-\|=\)\s\=function', a:flags . 'W')
+        if indent(line) == indent
+            let cnt = cnt - 1
+        endif
+    endwhile
+    return [line, column]
+endfunction "}}}
+
+autocmd FileType R,r,rmd nnoremap <buffer> <M-J> :call RFuncionMove('')<CR>
+autocmd FileType R,r,rmd nnoremap <buffer> <M-K> :call RFuncionMove('b')<CR>
+
 " }}}
 " R help {{{
 
