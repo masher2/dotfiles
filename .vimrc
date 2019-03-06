@@ -243,6 +243,10 @@ nnoremap <M-l> :tabnext<CR>
 nnoremap <M-k> <C-u>
 nnoremap <M-j> <C-d>
 
+" Alternate saving and quitting
+nnoremap <M-w> :w<cr>
+nnoremap <M-q> :q<cr>
+
 " }}}
 
 " Other ----------------------------------------------- {{{
@@ -251,6 +255,8 @@ nnoremap <M-j> <C-d>
 nnoremap <Space> za
 nnoremap <M-Space> zA
 
+" Scaping insert mode
+inoremap <M-Space> <Esc>
 " }}}
 
 " }}}
