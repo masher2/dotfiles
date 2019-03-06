@@ -33,7 +33,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme shine
+colorscheme bright
 syntax on
 
 " Vertical splits always
@@ -213,6 +213,13 @@ nnoremap <silent> <leader>ga :Gcommit --amend<CR>
 nnoremap <silent> <leader>gA :Gcommit --amend --no-edit<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gp :Gpush<CR>
+
+" Window comands
+nnoremap <leader>w <C-w>
+nnoremap <leader>wz <C-w>_<C-w>\|
+nnoremap <leader>w\ :vertical resize 80<Cr>
+nnoremap <leader>w, 10<C-w><
+nnoremap <leader>w. 10<C-w>>
 
 " }}}
 
