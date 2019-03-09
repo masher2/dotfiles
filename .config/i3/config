@@ -95,7 +95,7 @@ bindsym $mod+f fullscreen toggle
 
 # Download managers
 bindsym $mod+g exec --no-startup-id uget-gtk
-bindsym $mod+Shift+g exec --no-startup-id transmission-gtk
+bindsym $mod+Shift+g exec --no-startup-id deluge
 
 # change focus
 bindsym $mod+h focus left
@@ -124,9 +124,9 @@ bindsym $mod+Shift+x exec --no-startup-id ~/scripts/betterlockscreen -l dim
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-bindsym $mod+v exec via
+bindsym $mod+v exec --no-startup-id via
 
-bindsym $mod+b exec $term -e ranger
+bindsym $mod+b exec --no-startup-id $term -e ranger
 bindsym $mod+Shift+b exec --no-startup-id pcmanfm
 
 bindsym $mod+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere
