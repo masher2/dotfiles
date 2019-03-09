@@ -18,20 +18,16 @@ alias migrate='python manage.py migrate'
 alias dj='python manage.py'
 
 # Tmux alias
-tnew() {
-    dir=${PWD##*/}
-    tmux new -s $dir;
-}
+alias tnew="tmux new -s ${PWD##*/}"
 
 # Utils
 alias tree='tree -I __pycache__'
 alias stree='tree -d -L 2 -I __*__'
 
 # Ledger aliases
-alias led='nvim ~/masher.ldg'
-alias ledger='ledger -f ~/masher.ldg'
+alias led="nvim $LEDGER_FILE"
+alias ledger="ledger -f $LEDGER_FILE"
 alias assets='ledger --no-total bal Assets'
-
 
 # Misc stuff gotten from the internet
 extract () {
