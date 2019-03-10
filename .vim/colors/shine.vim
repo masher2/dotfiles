@@ -13,8 +13,9 @@ set background=dark
 
 " Clear highlight groups -----------------------------------------------
 hi clear Search
-hi clear CursorLine
 hi clear Folded
+hi clear CursorLine
+hi clear ColorColumn
 
 hi clear StatusLine
 hi clear StatusLineNC
@@ -31,12 +32,13 @@ hi clear DiffText
 "
 " Add highlighting ----------------------------------------------------
 hi Search       ctermbg=8
-hi CursorLine   cterm=NONE ctermbg=0
 hi Folded       ctermbg=NONE ctermfg=4
+hi CursorLine   cterm=NONE ctermbg=0
+hi ColorColumn  ctermbg=6
 
 " Status line ----------------------------------------------------------
-hi StatusLine   ctermbg=44 ctermfg=233
-hi StatusLineNC ctermbg=238 ctermfg=44
+hi StatusLine   ctermbg=6 ctermfg=233
+hi StatusLineNC ctermbg=238 ctermfg=6
 hi VertSplit    ctermbg=NONE ctermfg=240
 
 " Tab line -------------------------------------------------------------

@@ -40,7 +40,7 @@ hi clear DiffText
 
 " Add highlighting ----------------------------------------------------
 hi Search       ctermbg=8
-hi Folded       ctermbg=0 ctermfg=12
+hi Folded       cterm=bold ctermbg=NONE ctermfg=3
 hi FoldColumn   ctermbg=0 ctermfg=12
 hi CursorLine   cterm=NONE ctermbg=0
 
