@@ -33,7 +33,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme bright
+colorscheme shine
 syntax on
 
 " Vertical splits always
@@ -53,6 +53,10 @@ set wildmenu
 set showcmd
 set noswapfile
 set autoread
+
+" Allow window split borders to touch.
+set winminheight=0
+set winminwidth=0
 
 " Indent {{{
 
