@@ -77,6 +77,7 @@ bindsym $mod+Shift+r exec --no-startup-id rstudio
 
 bindsym $mod+t exec --no-startup-id telegram-desktop
 
+bindsym $mod+p exec --no-startup-id projects
 # }}}
 
 # A S D F G H J K L {{{
@@ -110,16 +111,16 @@ bindsym $mod+Shift+k move up 30
 bindsym $mod+Shift+l move right 30
 
 # resize window
-bindsym $mod+Ctrl+h exec --no-startup-id ~/scripts/i3resize left
-bindsym $mod+Ctrl+j exec --no-startup-id ~/scripts/i3resize down
-bindsym $mod+Ctrl+k exec --no-startup-id ~/scripts/i3resize up
-bindsym $mod+Ctrl+l exec --no-startup-id ~/scripts/i3resize right
+bindsym $mod+Ctrl+h exec --no-startup-id i3resize left
+bindsym $mod+Ctrl+j exec --no-startup-id i3resize down
+bindsym $mod+Ctrl+k exec --no-startup-id i3resize up
+bindsym $mod+Ctrl+l exec --no-startup-id i3resize right
 
 # }}}
 
 # Z X C V B N M {{{
 
-bindsym $mod+Shift+x exec --no-startup-id ~/scripts/betterlockscreen -l dim
+bindsym $mod+Shift+x exec --no-startup-id betterlockscreen -l dim
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -352,7 +353,7 @@ bindsym XF86KbdBrightnessDown exec light -Urs 'sysfs/leds/asus::kbd_backlight' 1
 #         Option "ScrollMethod" "twofinger"
 #         Option "Tapping" "off"
 # EndSection
-bindsym XF86TouchpadToggle exec ~/scripts/toggletouchpad.sh
+bindsym XF86TouchpadToggle exec toggletouchpad.sh
 # }}}
 
 # }}}
