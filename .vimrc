@@ -24,6 +24,8 @@ Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
 Plugin 'Yggdroot/indentLine'             " Show indenting
 Plugin 'masher2/readablefold.vim'        " Easier to read folding
+Plugin 'jceb/vim-orgmode'                " Orgmode
+Plugin 'mattn/calendar-vim'              " Calendar
 call vundle#end()
 
 filetype plugin indent on
@@ -33,7 +35,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme shine
+colorscheme bright
 syntax on
 
 " Vertical splits always
@@ -100,6 +102,13 @@ augroup END
 
 " =====================================================
 " Plugin options and mappings ------------------------- {{{
+
+" vim-calendar ---------------------------------------- {{{
+
+autocmd FileType calendar setlocal nonumber norelativenumber
+autocmd FileType calendar setlocal nofoldenable
+
+" }}}
 
 " Netrw ----------------------------------------------- {{{
 
