@@ -132,7 +132,7 @@ autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
 
 " Moving between function declarations
 " Got this from python-mode
-fun RFuncionMove(flags, ...) "{{{
+fun! RFuncionMove(flags, ...) "{{{
     let cnt = v:count1 - 1
     let [line, column] = searchpos('^[A-z0-9_.]\+\s\=\(<-\|=\)\s\=function', a:flags . 'sW')
     let indent = indent(line)
