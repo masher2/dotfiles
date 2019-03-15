@@ -35,7 +35,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme bright
+colorscheme shine
 syntax on
 
 " Vertical splits always
@@ -102,6 +102,12 @@ augroup END
 
 " =====================================================
 " Plugin options and mappings ------------------------- {{{
+
+" vim-tmux-navigator ---------------------------------- {{{
+
+ let g:tmux_navigator_disable_when_zoomed = 1
+
+" }}}
 
 " vim-calendar ---------------------------------------- {{{
 
