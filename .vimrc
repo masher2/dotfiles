@@ -35,7 +35,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme shine
+colorscheme bright
 syntax on
 
 " Vertical splits always
@@ -103,16 +103,22 @@ augroup END
 " =====================================================
 " Plugin options and mappings ------------------------- {{{
 
+" vim-calendar ---------------------------------------- {{{
+
+autocmd FileType calendar setlocal nonumber norelativenumber
+autocmd FileType calendar setlocal nofoldenable
+
+" }}}
+
 " vim-tmux-navigator ---------------------------------- {{{
 
  let g:tmux_navigator_disable_when_zoomed = 1
 
 " }}}
 
-" vim-calendar ---------------------------------------- {{{
+" Orgmode --------------------------------------------- {{{
 
-autocmd FileType calendar setlocal nonumber norelativenumber
-autocmd FileType calendar setlocal nofoldenable
+let g:org_todo_keywords=['TODO', 'DOING', '|', 'DONE']
 
 " }}}
 

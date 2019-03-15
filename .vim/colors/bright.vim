@@ -14,6 +14,9 @@ endif
 let g:colors_name = "bright"
 
 " Clear highlight groups -----------------------------------------------
+hi clear Ignore
+hi clear Todo
+
 hi clear Search
 hi clear Folded
 hi clear FoldColumn
@@ -37,6 +40,10 @@ hi clear DiffChange
 hi clear DiffDelete
 hi clear DiffText
 
+
+" Basic highlighting --------------------------------------------------
+hi Ignore       cterm=NONE ctermfg=0
+hi Todo         cterm=BOLD ctermfg=1
 
 " Add highlighting ----------------------------------------------------
 hi Search       ctermbg=8
