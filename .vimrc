@@ -35,7 +35,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme bright
+colorscheme shine
 syntax on
 
 " Vertical splits always
@@ -137,6 +137,8 @@ let R_csv_delim = ','
 let R_csv_app = 'tmux split-window scim_or_calc'
 let R_nvim_wd = 1
 let r_syntax_folding = 1
+autocmd FileType R,r setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType R,r setlocal colorcolumn=80
 
 " }}}
 " Mappings {{{
@@ -219,6 +221,9 @@ autocmd FileType html,htmldjango :IndentLinesEnable
 " Make `Y` congruent with `D` and `C`
 nnoremap Y y$
 
+" Redo with `U`
+nnoremap U <C-r>
+
 " }}}
 
 " Leader ---------------------------------------------- {{{
@@ -261,6 +266,7 @@ nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>wz <C-w>_<C-w>\|
 nnoremap <leader>w\ :vertical resize 80<Cr>
+nnoremap <leader>w/ :resize 37<Cr>
 nnoremap <leader>w, 10<C-w><
 nnoremap <leader>w. 10<C-w>>
 
