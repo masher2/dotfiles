@@ -136,9 +136,12 @@ let g:R_assign = 0
 let R_csv_delim = ','
 let R_csv_app = 'tmux split-window scim_or_calc'
 let R_nvim_wd = 1
+let R_esc_term = 0
+let R_hl_term = 1
 let r_syntax_folding = 1
-autocmd FileType R,r setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType R,r setlocal colorcolumn=80
+let rout_follow_colorscheme = 1
+autocmd FileType R,r set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType R,r set colorcolumn=80
 
 " }}}
 " Mappings {{{
@@ -148,7 +151,7 @@ autocmd FileType R,r,rmd imap <buffer> <M-m> %>%
 autocmd FileType R,r,rmd imap <buffer> <M--> <-
 
 " Running R code
-autocmd FileType R,r,rmd nmap <buffer>  \d
+autocmd FileType R,r,rmd nmap <buffer> <CR> \l
 autocmd FileType R,r nmap <buffer> <M-CR> \pp
 autocmd FileType rmd nmap <buffer> <M-CR> \cc
 autocmd FileType R,r,rmd vmap <buffer> <M-CR> \ss
