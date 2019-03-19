@@ -268,10 +268,14 @@ nnoremap <leader>gp :Gpush<CR>
 " Window comands
 nnoremap <leader>w <C-w>
 nnoremap <leader>wz <C-w>_<C-w>\|
-nnoremap <leader>w\ :vertical resize 80<Cr>
-nnoremap <leader>w/ :resize 37<Cr>
+nnoremap <leader>w\ :vertical resize 80<CR>
+nnoremap <leader>w/ :resize 40<CR>
 nnoremap <leader>w, 10<C-w><
 nnoremap <leader>w. 10<C-w>>
+
+" Edit my orgfile
+nnoremap <leader>o\ :vsp ~/Documents/notes.org<CR>
+nnoremap <leader>o/ :sp ~/Documents/notes.org<CR>
 
 " }}}
 
