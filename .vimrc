@@ -119,6 +119,7 @@ autocmd FileType calendar setlocal nofoldenable
 " Orgmode --------------------------------------------- {{{
 
 let g:org_todo_keywords=['TODO', 'DOING', '|', 'DONE']
+let g:org_indent = 1
 
 " }}}
 
@@ -273,9 +274,11 @@ nnoremap <leader>w/ :resize 40<CR>
 nnoremap <leader>w, 10<C-w><
 nnoremap <leader>w. 10<C-w>>
 
-" Edit my orgfile
+" Edit my orgfiles
 nnoremap <leader>o\ :vsp ~/Documents/notes.org<CR>
 nnoremap <leader>o/ :sp ~/Documents/notes.org<CR>
+nnoremap <leader>p\ :vsp notes.org<CR>
+nnoremap <leader>p/ :sp notes.org<CR>
 
 " }}}
 
