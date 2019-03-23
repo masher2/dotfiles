@@ -142,7 +142,6 @@ let R_hl_term = 1
 let r_syntax_folding = 1
 let rout_follow_colorscheme = 1
 autocmd FileType R,r set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType R,r set colorcolumn=80
 
 " }}}
 " Mappings {{{
@@ -179,7 +178,7 @@ autocmd FileType R,r,rmd nnoremap <buffer> <M-K> :call RFuncionMove('b')<CR>
 " R help {{{
 
 autocmd FileType R,r,rmd nmap <buffer> <F1> \rh
-autocmd FileType Rdoc,rdoc setlocal nofoldenable
+autocmd FileType Rdoc,rdoc setlocal nofoldenable nonumber norelativenumber
 autocmd FileType rmd setlocal commentstring=#\ %s
 
 " }}}
