@@ -227,6 +227,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # }}}
 
 # Windows {{{
+for_window [class="Surf"] border normal
 
 # Floating windows {{{
 for_window [class="R_x11"] floating enable
@@ -242,6 +243,7 @@ for_window [class="dropdown_servers"] move scratchpad
 for_window [class="dropdown_servers"] scratchpad show
 for_window [class="dropdown_servers"] resize set 800 800
 for_window [class="dropdown_servers"] move position center
+
 # }}}
 
 # Workspace assignations {{{
@@ -332,7 +334,9 @@ bar {
 
 # Backlight control {{{
 bindsym XF86MonBrightnessUp exec light -A 5
+bindsym $mod+Shift+F6 exec light -A 1
 bindsym XF86MonBrightnessDown exec light -U 5
+bindsym $mod+Shift+F5 exec light -U 1
 
 # Get the name of your keyboard backlights with:
 # light -L
