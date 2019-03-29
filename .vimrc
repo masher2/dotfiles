@@ -35,7 +35,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme shine
+colorscheme bright
 syntax on
 
 " Vertical splits always
@@ -139,6 +139,7 @@ let R_csv_app = 'tmux split-window scim_or_calc'
 let R_nvim_wd = 1
 let R_esc_term = 0
 let R_hl_term = 1
+let r_indent_align_args = 0
 let r_syntax_folding = 1
 let rout_follow_colorscheme = 1
 autocmd FileType R,r set tabstop=2 shiftwidth=2 softtabstop=2
