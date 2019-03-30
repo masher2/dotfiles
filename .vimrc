@@ -35,7 +35,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme bright
+colorscheme shine
 syntax on
 
 " Vertical splits always
@@ -269,7 +269,7 @@ nnoremap <leader>gp :Gpush<CR>
 " Window comands
 nnoremap <leader>w <C-w>
 nnoremap <leader>wz <C-w>_<C-w>\|
-nnoremap <leader>w\ :vertical resize 80<CR>
+nnoremap <leader>w\ :exec "vertical resize " (&numberwidth + 80)<CR>
 nnoremap <leader>w/ :resize 40<CR>
 nnoremap <leader>w, 10<C-w><
 nnoremap <leader>w. 10<C-w>>
