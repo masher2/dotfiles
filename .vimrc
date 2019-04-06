@@ -210,6 +210,7 @@ autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
 autocmd FileType html,htmldjango setlocal nofoldenable
 autocmd FileType html,htmldjango setlocal foldnestmax=30
 autocmd FileType html,htmldjango :IndentLinesEnable
+autocmd FileType html,htmldjango set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 
