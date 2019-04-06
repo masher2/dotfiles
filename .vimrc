@@ -22,6 +22,7 @@ Plugin 'ledger/vim-ledger'               " Ledger plugin
 Plugin 'rcaputo/vim-ledger_x'            " Ledger plugin
 Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
+Plugin 'davidhalter/jedi-vim'            " Python completion
 Plugin 'Yggdroot/indentLine'             " Show indenting
 Plugin 'masher2/readablefold.vim'        " Easier to read folding
 Plugin 'jceb/vim-orgmode'                " Orgmode
@@ -194,6 +195,8 @@ let g:pymode_python = 'python3'
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_signs = 0
 let g:pymode_options_colorcolumn = 0
+let g:pymode_breakpoint_cmd = 'breakpoint()'
+let g:jedi#use_splits_not_buffers = 'winwidth'
 
 autocmd FileType python setlocal wrap
 
