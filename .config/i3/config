@@ -162,7 +162,7 @@ bindsym $mod+Shift+Right move right
 
 # screenshots
 bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print exec --no-startup-id i3-scrot -w
+bindsym Shift+Print --release exec --no-startup-id i3-scrot -w
 bindsym Ctrl+Print --release exec --no-startup-id i3-scrot -s
 
 # toggle tiling / floating
