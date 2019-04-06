@@ -142,6 +142,8 @@ bindsym $mod+Shift+m exec pavucontrol
 
 bindsym $mod+grave exec --no-startup-id ddspawn servers
 
+bindsym $mod+Pause exec --no-startup-id i3-keyboard-layout cycle us es no
+
 # split in horizontal orientation
 bindsym $mod+backslash split h
 
@@ -303,7 +305,7 @@ mode "resize" {
 # finds out, if available)
 bar {
 	i3bar_command i3bar
-	status_command i3status
+    status_command i3status | i3-keyboard-layout i3status
 	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
