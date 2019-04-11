@@ -202,6 +202,8 @@ let g:pymode_lint_signs = 0
 let g:pymode_options_colorcolumn = 0
 let g:pymode_breakpoint_cmd = 'breakpoint()'
 let g:jedi#use_splits_not_buffers = 'winwidth'
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = 0
 
 autocmd FileType python setlocal wrap
 
