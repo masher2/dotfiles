@@ -15,12 +15,11 @@ Plugin 'tpope/vim-commentary'            " Comments
 Plugin 'tpope/vim-surround'              " Surrounding text
 Plugin 'tpope/vim-vinegar'               " Explorer enhance
 Plugin 'tweekmonster/django-plus.vim'    " Django Plugin
-Plugin 'plasticboy/vim-markdown'         " Markdown plugin
+Plugin 'sheerun/vim-polyglot'            " Syntax highlighting for a lot of filetypes
 Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown plugin
 Plugin 'jalvesaq/Nvim-R'                 " R plugin
 Plugin 'ledger/vim-ledger'               " Ledger plugin
 Plugin 'rcaputo/vim-ledger_x'            " Ledger plugin
-Plugin 'mboughaba/i3config.vim'          " i3config syntax highlighting
 Plugin 'python-mode/python-mode'         " Python plugin
 Plugin 'davidhalter/jedi-vim'            " Python completion
 Plugin 'Yggdroot/indentLine'             " Show indenting
@@ -114,6 +113,12 @@ autocmd FileType calendar setlocal nofoldenable
 " vim-tmux-navigator ---------------------------------- {{{
 
  let g:tmux_navigator_disable_when_zoomed = 1
+
+" }}}
+
+" vim-polyglot ---------------------------------------- {{{
+
+ let g:polyglot_disabled = ['r-lang', 'python', 'tmux']
 
 " }}}
 
