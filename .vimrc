@@ -244,10 +244,10 @@ nnoremap U <C-r>
 " Leader ---------------------------------------------- {{{
 
 " Easier file navigation
-nnoremap <leader>e :edit **/*
-nnoremap <leader>t :tabedit **/*
-nnoremap <leader>/ :sp **/*
-nnoremap <leader>\ :vsp **/*
+nnoremap <leader>e :find<Space>
+nnoremap <leader>t :tabfind<Space>
+nnoremap <leader>/ :sfind<Space>
+nnoremap <leader>\ :vert sfind<Space>
 
 " Easy copy to clipboard
 nnoremap <leader>y "+y
