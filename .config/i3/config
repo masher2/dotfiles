@@ -233,6 +233,7 @@ for_window [class="Surf"] border normal
 
 # Floating windows {{{
 for_window [class="R_x11"] floating enable
+for_window [title="Choose one"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
 
