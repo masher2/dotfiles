@@ -18,7 +18,7 @@ alias migrate='python manage.py migrate'
 alias dj='python manage.py'
 
 # Tmux alias
-alias tnew="tmux new -s ${PWD##*/}"
+alias tnew='tmux new -s "${PWD##*/}"'
 
 # Utils
 alias tree='tree -I __pycache__'
