@@ -83,9 +83,9 @@ update_tmux() {
         TMUX_STATUS_DEFINITION
         
         if [ "$GIT_DIRTY" ]; then 
-            tmux set-window-option status-$TMUX_STATUS_LOCATION-attr bright > /dev/null
+            tmux set-window-option -a status-$TMUX_STATUS_LOCATION-style bright > /dev/null
         else
-            tmux set-window-option status-$TMUX_STATUS_LOCATION-attr none > /dev/null
+            tmux set-window-option -a status-$TMUX_STATUS_LOCATION-style none > /dev/null
         fi
         
         tmux set-window-option status-$TMUX_STATUS_LOCATION "$TMUX_STATUS" > /dev/null            
@@ -99,7 +99,7 @@ update_tmux() {
         else
             # Be sure to unset GIT_DIRTY's bright when leaving a repository.
             # Kudos to https://github.com/danarnold for the idea
-            tmux set-window-option status-$TMUX_STATUS_LOCATION-attr none > /dev/null
+            tmux set-window-option -a status-$TMUX_STATUS_LOCATION-style none > /dev/null
 
             # Set the out-repo status
             tmux set-window-option status-$TMUX_STATUS_LOCATION "$TMUX_OUTREPO_STATUS" > /dev/null
