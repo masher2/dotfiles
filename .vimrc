@@ -148,7 +148,7 @@ let R_hl_term = 1
 let r_indent_align_args = 0
 let r_syntax_folding = 1
 let rout_follow_colorscheme = 1
-autocmd FileType R,r set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType R,r,rmd,Rmd set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 " Mappings {{{
@@ -185,7 +185,7 @@ autocmd FileType R,r,rmd nnoremap <buffer> <M-K> :call RFuncionMove('b')<CR>
 " R help {{{
 
 autocmd FileType R,r,rmd nmap <buffer> <F1> \rh
-autocmd FileType Rdoc,rdoc setlocal nofoldenable nonumber norelativenumber
+autocmd FileType Rdoc,rdoc,rbrowser setlocal nofoldenable nonumber norelativenumber
 autocmd FileType rmd setlocal commentstring=#\ %s
 
 " }}}
@@ -221,6 +221,7 @@ autocmd FileType html,htmldjango setlocal nofoldenable
 autocmd FileType html,htmldjango setlocal foldnestmax=30
 autocmd FileType html,htmldjango :IndentLinesEnable
 autocmd FileType html,htmldjango set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType xml,css,sass,scss set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 
