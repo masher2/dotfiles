@@ -63,7 +63,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
-bindsym $mod+w exec --no-startup-id firefox
+bindsym $mod+w exec --no-startup-id brave
 bindsym $mod+Shift+w exec --no-startup-id firefox --private-window
 
 bindsym $mod+e layout toggle split
