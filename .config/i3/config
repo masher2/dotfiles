@@ -124,7 +124,7 @@ bindsym $mod+Shift+c reload
 
 bindsym $mod+v exec --no-startup-id via
 
-bindsym $mod+b exec --no-startup-id $term -e ranger
+bindsym $mod+b exec --no-startup-id kitty -e ranger
 bindsym $mod+Shift+b exec --no-startup-id pcmanfm
 
 bindsym $mod+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere
