@@ -46,7 +46,7 @@ hi Ignore       cterm=NONE ctermfg=0
 hi Todo         cterm=BOLD ctermfg=1
 
 " Add highlighting ----------------------------------------------------
-hi Search       ctermbg=8
+hi Search       cterm=underline ctermbg=NONE ctermfg=NONE
 hi Folded       cterm=bold ctermbg=NONE ctermfg=3
 hi FoldColumn   ctermbg=0 ctermfg=12
 hi CursorLine   cterm=NONE ctermbg=0

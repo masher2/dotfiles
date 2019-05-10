@@ -31,7 +31,7 @@ hi clear DiffText
 
 "
 " Add highlighting ----------------------------------------------------
-hi Search       ctermbg=8
+hi Search       cterm=underline ctermbg=NONE ctermfg=NONE
 hi Folded       ctermbg=NONE ctermfg=4
 hi CursorLine   cterm=NONE ctermbg=0
 hi ColorColumn  ctermbg=6
