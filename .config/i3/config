@@ -63,8 +63,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
-bindsym $mod+w exec --no-startup-id brave
-bindsym $mod+Shift+w exec --no-startup-id firefox --private-window
+bindsym $mod+w exec --no-startup-id surf
+bindsym $mod+Shift+w mode "$browsers"
 
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e mode "$mode_system"
@@ -254,6 +254,20 @@ assign [class="Mailspring"] $ws5
 # }}}
 
 # Modes {{{
+
+# Open a specific browser
+set $browsers (s)urf, (b)rave, (f)irefox, (i)ncognito firefox
+mode "$browsers" {
+    bindsym s exec --no-startup-id surf, mode "default"
+    bindsym b exec --no-startup-id brave, mode "default"
+    bindsym f exec --no-startup-id firefox, mode "default"
+    bindsym i exec --no-startup-id firefox --private-window, mode "default"
+
+    # Cancel launching a browser
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 
 # Set shut down, restart and locking features
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
