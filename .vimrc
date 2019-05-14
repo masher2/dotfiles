@@ -278,6 +278,10 @@ nnoremap <silent> <leader>gA :Gcommit --amend --no-edit<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <leader>gp :Gpush<CR>
 
+" diffs
+nnoremap <leader>dt :diffthis<CR>
+nnoremap <leader>do :diffoff<CR>
+
 " Window comands
 nnoremap <leader>w <C-w>
 nnoremap <leader>wz <C-w>_<C-w>\|
