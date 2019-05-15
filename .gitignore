@@ -7,6 +7,13 @@
 .config/ranger/devicons.*
 .config/ranger/plugins/
 .config/nvim/.netrwhist
+.config/mpd/database
+.config/mpd/log
+.config/mpd/pid
+.config/mpd/state
+.config/mpd/sticker.sql
+
+*.log
 
 notes.md
 
