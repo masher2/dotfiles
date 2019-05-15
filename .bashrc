@@ -50,7 +50,7 @@ fi
 # Environment variables ---------------------------------------------------- {{{
 
 # Path
-export PATH=$PATH:$HOME/scripts
+export PATH=$PATH:$HOME/scripts:$HOME/.local/bin
 
 export EDITOR="nvim"
 export BROWSER="firefox"
@@ -63,7 +63,7 @@ export PYTHONBREAKPOINT='ipdb.set_trace'
 
 # Aliases ------------------------------------------------------------------ {{{
 
-# LS aliases {{{
+# ls aliases {{{
 
 alias ll='ls -alF'
 alias la='ls -A'

@@ -2,7 +2,6 @@
 if [[ -f ~/scripts/venv_utils.sh ]]; then
     source ~/scripts/venv_utils.sh;
 fi
-alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 alias tst='python -m unittest'
 
 # Django commands
