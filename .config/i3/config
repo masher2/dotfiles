@@ -18,7 +18,7 @@ smart_gaps on
 
 set $mod Mod4
 set $term --no-startup-id kitty -1 --listen-on unix:/tmp/kitty
-
+set $postmusic pkill -RTMIN+11 i3blocks
 
 # Startup {{{
 
@@ -151,14 +151,14 @@ bindsym $mod+backslash split h
 bindsym $mod+slash split v
 
 # Music  bindings
-bindsym $mod+bracketright exec mpc next
-bindsym $mod+Shift+bracketright exec mpc seekthrough +00:00:10
+bindsym $mod+bracketright exec mpc next && $postmusic
+bindsym $mod+Shift+bracketright exec mpc seekthrough +00:00:10 && $postmusic
 
-bindsym $mod+bracketleft exec mpc prev
-bindsym $mod+Shift+bracketleft exec mpc seekthrough -00:00:10
+bindsym $mod+bracketleft exec mpc prev && $postmusic
+bindsym $mod+Shift+bracketleft exec mpc seekthrough -00:00:10 && $postmusic
 
-bindsym $mod+semicolon exec mpc toggle
-bindsym $mod+Shift+semicolon exec mpc pause
+bindsym $mod+semicolon exec mpc toggle && $postmusic
+bindsym $mod+Shift+semicolon exec mpc pause && $postmusic
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
