@@ -276,8 +276,7 @@ mpd_music_dir = ~/Music
 ## changes. The environment variable MPD_PLAYER_STATE is set to the current
 ## state (either unknown, play, pause, or stop) for its duration.
 ##
-
-#execute_on_player_state_change = ""
+execute_on_player_state_change = "pkill -RTMIN+11 i3blocks"
 
 #playlist_show_mpd_host = no
 
