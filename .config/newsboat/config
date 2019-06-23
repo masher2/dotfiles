@@ -1,4 +1,4 @@
-browser surf
+browser "surf %u &"
 auto-reload yes
 
 bind-key j down
@@ -13,6 +13,8 @@ bind-key d pagedown
 bind-key u pageup
 bind-key l open
 bind-key h quit
+bind-key a toggle-article-read
+bind-key U show-urls
 
 color listnormal blue default
 color listnormal_unread blue default bold
@@ -20,4 +22,7 @@ color listfocus black cyan standout
 color listfocus_unread cyan black bold
 color info color12 color8 bold
 
-macro o set browser "w3m" ; open-in-browser ; set browser surf
+text-width 120
+
+macro o set browser "w3m" ; open-in-browser ; set browser "surf %u &"
+macro b set browser "brave --incognito %u &" ; open-in-browser ; set browser "surf %u &"
