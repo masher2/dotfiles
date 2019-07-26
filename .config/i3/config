@@ -78,9 +78,10 @@ bindsym $mod+Shift+r exec --no-startup-id rstudio
 bindsym $mod+t exec --no-startup-id telegram-desktop
 
 bindsym $mod+o exec --no-startup-id $term newsboat
-bindsym $mod+Shift+o exec --no-startup-id $term ncmpcpp
 
 bindsym $mod+p exec --no-startup-id projects
+bindsym $mod+Shift+p exec pavucontrol
+
 # }}}
 
 # A S D F G H J K L {{{
@@ -136,8 +137,8 @@ bindsym $mod+Shift+b exec --no-startup-id pcmanfm
 bindsym $mod+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere
 bindsym $mod+Shift+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere -c
 
-bindsym $mod+m exec --no-startup-id mailspring
-bindsym $mod+Shift+m exec pavucontrol
+bindsym $mod+m exec --no-startup-id ddspawn ncmpcpp
+bindsym $mod+Shift+m exec --no-startup-id via -m
 
 # }}}
 
@@ -259,6 +260,12 @@ for_window [class="dropdown_servers"] move scratchpad
 for_window [class="dropdown_servers"] scratchpad show
 for_window [class="dropdown_servers"] resize set 800 800
 for_window [class="dropdown_servers"] move position center
+
+for_window [class="dropdown_ncmpcpp"] floating enable
+for_window [class="dropdown_ncmpcpp"] move scratchpad
+for_window [class="dropdown_ncmpcpp"] scratchpad show
+for_window [class="dropdown_ncmpcpp"] resize set 800 600
+for_window [class="dropdown_ncmpcpp"] move position 1050 400
 
 # }}}
 
