@@ -52,10 +52,7 @@ fi
 # Path
 export PATH=$PATH:$HOME/scripts:$HOME/.local/bin
 
-export EDITOR="nvim"
-export BROWSER="firefox"
-
-export LEDGER_FILE="$HOME/masher.ldg"
+export LEDGER_FILE="$HOME/Documents/masher.ldg"
 
 export PYTHONBREAKPOINT='ipdb.set_trace'
 

@@ -227,6 +227,12 @@ autocmd FileType xml,css,sass,scss set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 
+" Ledger ---------------------------------------------- {{{
+
+autocmd FileType ledger set tabstop=2 shiftwidth=2 softtabstop=2
+
+" }}}
+
 " }}}
 
 " =====================================================
