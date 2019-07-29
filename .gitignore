@@ -1,17 +1,18 @@
 .vim/bundle/
 .vim/.netrwhist
 
-.config/ranger/bookmarks
-.config/ranger/history
-.config/ranger/tagged
-.config/ranger/devicons.*
-.config/ranger/plugins/
-.config/nvim/.netrwhist
 .config/mpd/database
 .config/mpd/log
 .config/mpd/pid
+.config/mpd/playlists
 .config/mpd/state
 .config/mpd/sticker.sql
+.config/nvim/.netrwhist
+.config/ranger/bookmarks
+.config/ranger/devicons.*
+.config/ranger/history
+.config/ranger/plugins/
+.config/ranger/tagged
 
 *.log
 
