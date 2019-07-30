@@ -181,7 +181,7 @@ mpd_music_dir = ~/Music
 ## Note: colors can be nested.
 ##
 
-#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
 
 #song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 
@@ -191,17 +191,17 @@ mpd_music_dir = ~/Music
 
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 
-#current_item_prefix = $(yellow)$r
+current_item_prefix = $(13)$r
 
-#current_item_suffix = $/r$(end)
+current_item_suffix = $/r$(end)
 
-#current_item_inactive_column_prefix = $(white)$r
+current_item_inactive_column_prefix = $(13_1)
 
-#current_item_inactive_column_suffix = $/r$(end)
+current_item_inactive_column_suffix = $(end)
 
-#now_playing_prefix = $b
+now_playing_prefix = $u
 
-#now_playing_suffix = $/b
+now_playing_suffix = $/u
 
 #browser_playlist_prefix = "$2playlist$9 "
 
@@ -261,7 +261,7 @@ mpd_music_dir = ~/Music
 ##   available.
 ##
 
-#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+song_columns_list_format = (20)[cyan]{a} (6f)[blue]{NE} (50)[13]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
 
 ##### various settings #####
 
@@ -289,13 +289,13 @@ execute_on_player_state_change = "pkill -RTMIN+11 i3blocks"
 ##
 ## Note: Possible display modes: classic, columns.
 ##
-#playlist_display_mode = columns
+playlist_display_mode = columns
 
 browser_display_mode = columns
 
 #search_engine_display_mode = classic
 
-#playlist_editor_display_mode = classic
+playlist_editor_display_mode = classic
 
 #discard_colors_if_item_is_selected = yes
 
@@ -329,7 +329,7 @@ user_interface = alternative
 
 ## Available values: artist, album_artist, date, genre, composer, performer.
 ##
-#media_library_primary_tag = artist
+media_library_primary_tag = album_artist
 
 #media_library_albums_split_by_date = yes
 
@@ -386,7 +386,7 @@ user_interface = alternative
 ## media_library, playlist_editor, tag_editor, outputs, visualizer, clock,
 ## lyrics, last_fm.
 ##
-#screen_switcher_mode = playlist, browser
+screen_switcher_mode = previous
 
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
@@ -510,7 +510,7 @@ user_interface = alternative
 
 #empty_tag_color = cyan
 
-#header_window_color = default
+header_window_color = default
 
 #volume_color = default
 
@@ -518,7 +518,7 @@ user_interface = alternative
 
 #state_flags_color = default:b
 
-#main_window_color = yellow
+main_window_color = 13
 
 #color1 = white
 
@@ -526,9 +526,9 @@ user_interface = alternative
 
 #progressbar_color = black:b
 
-#progressbar_elapsed_color = green:b
+progressbar_elapsed_color = 4
 
-#statusbar_color = default
+statusbar_color = default
 
 #statusbar_time_color = default:b
 
