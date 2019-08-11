@@ -1,7 +1,4 @@
 # Python commands
-if [[ -f ~/scripts/venv_utils.sh ]]; then
-    source ~/scripts/venv_utils.sh;
-fi
 alias tst='python -m unittest'
 
 # Django commands
