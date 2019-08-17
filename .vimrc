@@ -26,6 +26,7 @@ Plugin 'Yggdroot/indentLine'             " Show indenting
 Plugin 'masher2/readablefold.vim'        " Easier to read folding
 Plugin 'jceb/vim-orgmode'                " Orgmode
 Plugin 'mattn/calendar-vim'              " Calendar
+Plugin 'ap/vim-css-color'                " Hexadecimal color hints
 call vundle#end()
 
 filetype plugin indent on
