@@ -1,5 +1,6 @@
 # Python commands
 alias tst='python -m unittest'
+alias actenv='source actenv'
 
 # Django commands
 runserver() {
