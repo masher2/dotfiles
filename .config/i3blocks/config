@@ -17,6 +17,11 @@ label=♪
 interval=once
 signal=11
 
+[kbdlayout]
+command=setxkbmap -query | grep -oP 'layout:\s*\K(\w+)'
+interval=once
+signal=12
+
 [memory]
 label=ram
 separator=false
