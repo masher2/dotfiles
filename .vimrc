@@ -36,7 +36,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme shine
+colorscheme bright
 syntax on
 
 " Vertical splits always
@@ -223,6 +223,7 @@ autocmd FileType html,htmldjango setlocal foldnestmax=30
 autocmd FileType html,htmldjango :IndentLinesEnable
 autocmd FileType html,htmldjango set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType xml,css,sass,scss set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 
