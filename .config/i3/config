@@ -247,6 +247,7 @@ for_window [class="Surf"] border normal
 
 # Floating windows {{{
 for_window [class="R_x11"] floating enable
+for_window [class="Matplotlib"] floating enable
 for_window [title="Choose one"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
@@ -370,10 +371,10 @@ bar {
 # Misc {{{
 
 # Backlight control {{{
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym $mod+Shift+F6 exec light -A 1
-bindsym XF86MonBrightnessDown exec light -U 5
-bindsym $mod+Shift+F5 exec light -U 1
+bindsym XF86MonBrightnessUp exec sudo light -A 5
+bindsym $mod+Shift+F6 exec sudo light -A 1
+bindsym XF86MonBrightnessDown exec sudo light -U 5
+bindsym $mod+Shift+F5 exec sudo light -U 1
 
 # Get the name of your keyboard backlights with:
 # light -L
