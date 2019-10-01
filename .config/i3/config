@@ -139,6 +139,7 @@ bindsym $mod+Shift+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere -c
 
 bindsym $mod+m exec --no-startup-id ddspawn ncmpcpp
 bindsym $mod+Shift+m exec --no-startup-id via -m
+bindsym $mod+Ctrl+m exec --no-startup-id via -A
 
 # }}}
 
