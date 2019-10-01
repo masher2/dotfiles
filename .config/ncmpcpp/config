@@ -1,3 +1,4 @@
+# vim:ft=config
 ##############################################################################
 ## This is the example configuration file. Copy it to $HOME/.ncmpcpp/config ##
 ## or $XDG_CONFIG_HOME/ncmpcpp/config and set up your preferences.          ##
@@ -112,7 +113,7 @@ mpd_music_dir = ~/Music
 
 ## Defines how long messages are supposed to be visible.
 ##
-#message_delay_time = 5
+message_delay_time = 3
 
 ##### song format #####
 ##
@@ -262,6 +263,8 @@ now_playing_suffix = $/u
 ##
 
 song_columns_list_format = (20)[cyan]{a} (6f)[blue]{NE} (50)[13]{t|f:Title} (20)[cyan]{b} (7f)[blue]{l}
+# song_columns_list_format = (6)[]{} (20)[blue]{a} (35)[13]{t|f} (10f)[cyan]{b} (5f)[blue]{l} (1)[]{}
+
 
 ##### various settings #####
 
@@ -269,7 +272,7 @@ song_columns_list_format = (20)[cyan]{a} (6f)[blue]{NE} (50)[13]{t|f:Title} (20)
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-#execute_on_song_change = ""
+execute_on_song_change = "~/.config/ncmpcpp/coverart"
 
 ##
 ## Note: Custom command that will be executed each time player state
@@ -293,7 +296,7 @@ playlist_display_mode = columns
 
 browser_display_mode = columns
 
-#search_engine_display_mode = classic
+search_engine_display_mode = columns
 
 playlist_editor_display_mode = classic
 
@@ -315,7 +318,7 @@ playlist_editor_display_mode = classic
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-#progressbar_look = =>
+progressbar_look = "─⊙ "
 
 ## Available values: database, playlist.
 ##
@@ -391,21 +394,20 @@ screen_switcher_mode = previous
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-#startup_screen = playlist
+startup_screen = "visualizer"
 
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
 ## above or an empty value for no slave screen.
 ##
-#startup_slave_screen = ""
-
-#startup_slave_screen_focus = no
+startup_slave_screen = "playlist"
+startup_slave_screen_focus = "yes"
 
 ##
 ## Default width of locked screen (in %).  Acceptable values are from 20 to 80.
 ##
 
-#locked_screen_width_part = 50
+locked_screen_width_part = 24
 
 #ask_for_locked_screen_width_part = yes
 

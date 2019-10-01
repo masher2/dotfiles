@@ -1,0 +1,16 @@
+#! /bin/bash
+
+MUSIC_DIR=$HOME/Music
+
+file="$(mpc --format %file% current)"
+album_dir="${file%/*}"
+cover="$(find "$MUSIC_DIR/$album_dir" -name 'cover*')"
+
+function kdisplay {
+    kitty +kitten icat --clear --transfer-mode=file
+    # Middle right: 67x13
+    # Top left: 0x7 
+     kitty +kitten icat --place=21x21@0x7 --transfer-mode=file "$1"
+}
+
+kdisplay "$cover"
