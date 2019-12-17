@@ -36,7 +36,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme bright
+colorscheme shine
 syntax on
 
 " Vertical splits always
@@ -149,6 +149,7 @@ let R_hl_term = 1
 let r_indent_align_args = 0
 let r_syntax_folding = 1
 let rout_follow_colorscheme = 1
+let R_start_libs = 'base,stats,graphics,grDevices,utils,methods,readr,dplyr,magrittr,ggplot2,lubridate,tidyr'
 autocmd FileType R,r,rmd,Rmd set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
