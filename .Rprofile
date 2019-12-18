@@ -5,9 +5,9 @@ local({
 })
 
 .is_daytime <- function() {
-    curr_time <- hms::as.hms(lubridate::now())
-    after_7 <- lubridate::hm("7:00") < curr_time
-    before_6 <- curr_time < lubridate::hm("18:15") 
+    curr_time <- Sys.time()
+    after_7 <- strptime("07:00", "%H:%M") < curr_time
+    before_6 <- strptime("18:00", "%H:%M") > curr_time
 
     after_7 & before_6
 }
