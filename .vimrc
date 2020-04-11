@@ -344,3 +344,11 @@ inoremap <M-Space> <Esc>
 " }}}
 
 " }}}
+
+" =====================================================
+" Custom commands ------------------------------------- {{{
+
+" Transform youtube file titles into markdown links
+command! Ytitle s~\s*\([A-z ]\+\)-\([A-z0-9_]\{11}\)\.\w\{3}~[[video] \1](https://www.youtube.com/watch?v=\2)
+
+" }}}
