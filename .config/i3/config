@@ -134,8 +134,8 @@ bindsym $mod+v exec --no-startup-id via
 bindsym $mod+b exec --no-startup-id kitty -e ranger
 bindsym $mod+Shift+b exec --no-startup-id pcmanfm
 
-bindsym $mod+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere
-bindsym $mod+Shift+n exec ~/Work/Jesus/vim-anywhere/vim_anywhere -c
+bindsym $mod+n exec ~/work/Jesus/vim-anywhere/vim_anywhere
+bindsym $mod+Shift+n exec ~/work/Jesus/vim-anywhere/vim_anywhere -c
 
 bindsym $mod+m exec --no-startup-id ddspawn ncmpcpp
 bindsym $mod+Shift+m exec --no-startup-id via -m

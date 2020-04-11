@@ -7,12 +7,12 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/usr/lib/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
 [music]
-command=~/scripts/statusbar/music
+command=~/work/Jesus/scripts/statusbar/music
 label=♪
 interval=once
 signal=11
@@ -27,21 +27,17 @@ label=ram
 separator=false
 interval=30
 
-[memory]
-label=swap
-instance=swap
-separator=false
-interval=30
-
 [disk]
 label=⛁
 interval=30
 
 [bandwidth]
 interval=5
+inlabel=
+outlabel=
 
 [battery]
-command=~/scripts/statusbar/battery BAT0
+command=~/work/Jesus/scripts/statusbar/battery BAT0
 interval=5
 
 [time]
