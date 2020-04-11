@@ -8,6 +8,18 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# XDG Directories
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DESKTOP_DIR=$(xdg-user-dir DESKTOP)
+export XDG_DESKTOP_DIR=$(xdg-user-dir DESKTOP)
+export XDG_DOWNLOAD_DIR=$(xdg-user-dir DOWNLOAD)
+export XDG_TEMPLATES_DIR=$(xdg-user-dir TEMPLATES)
+export XDG_PUBLICSHARE_DIR=$(xdg-user-dir PUBLICSHARE)
+export XDG_DOCUMENTS_DIR=$(xdg-user-dir DOCUMENTS)
+export XDG_MUSIC_DIR=$(xdg-user-dir MUSIC)
+export XDG_PICTURES_DIR=$(xdg-user-dir PICTURES)
+export XDG_VIDEOS_DIR=$(xdg-user-dir VIDEOS)
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -27,8 +39,8 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/scripts" ] ; then
-    PATH="$HOME/scripts:$PATH"
+if [ -d "$HOME/work/Jesus/scripts" ] ; then
+    PATH="$HOME/work/Jesus/scripts:$PATH"
 fi
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
