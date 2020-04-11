@@ -1,3 +1,5 @@
+# vim:ft=r
+
 local({
   r <- getOption("repos")
   r["CRAN"] <- "https://cloud.r-project.org/"
@@ -17,8 +19,8 @@ local({
 if (.is_daytime()) {
     colorout::setOutputColors(
         normal=12, negnum=13, zero=6, number=4, date=9, string=4, const=1,
-        false=9, true=6, infinite=5, index=3, stderror=5, warn=c(1, 16, 1),
-        error=c(7, 16, 1), verbose = FALSE
+        false=9, true=6, infinite=5, index=3, stderror=5, warn=c(0, 8, 1),
+        error=c(0, 8, 1), verbose = FALSE
     )
 } else {
     colorout::setOutputColors(
@@ -27,4 +29,5 @@ if (.is_daytime()) {
         warn=c(1, 16, 196), error=c(160, 231), verbose = FALSE
     )
 }
+
 

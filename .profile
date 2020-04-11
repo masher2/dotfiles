@@ -20,6 +20,10 @@ export XDG_MUSIC_DIR=$(xdg-user-dir MUSIC)
 export XDG_PICTURES_DIR=$(xdg-user-dir PICTURES)
 export XDG_VIDEOS_DIR=$(xdg-user-dir VIDEOS)
 
+# R files
+export R_ENVIRON_USER=$XDG_CONFIG_HOME/R/environ
+export R_PROFILE_USER=$XDG_CONFIG_HOME/R/profile
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
