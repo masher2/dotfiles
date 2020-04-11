@@ -49,9 +49,6 @@ fi
 
 # Environment variables ---------------------------------------------------- {{{
 
-# Path
-export PATH=$PATH:$HOME/scripts:$HOME/.local/bin
-
 export LEDGER_FILE="$HOME/Documents/masher.ldg"
 
 export PYTHONBREAKPOINT='ipdb.set_trace'
