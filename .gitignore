@@ -9,6 +9,8 @@
 .config/mpd/sticker.sql
 
 .config/nvim/.netrwhist
+.config/nvim/bundle/
+.config/nvim/colors/
 
 .config/ranger/bookmarks
 .config/ranger/devicons.*
