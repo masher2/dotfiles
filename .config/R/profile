@@ -30,4 +30,14 @@ if (.is_daytime()) {
     )
 }
 
+# Define options
+options(
+  blogdown.author = "Jesús Pérez",
+  blogdown.ext = ".Rmd",
+  blogdown.subdir = "posts"
+)
+
+if (file.exists("config.toml")) {
+  library(blogdown)
+}
 
