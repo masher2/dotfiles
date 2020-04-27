@@ -74,7 +74,7 @@ bindsym $mod+Shift+e mode "$mode_system"
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+t exec --no-startup-id telegram-desktop
+bindsym $mod+Shift+t exec --no-startup-id telegram-desktop
 
 bindsym $mod+o exec --no-startup-id $term newsboat
 
