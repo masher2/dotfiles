@@ -73,7 +73,6 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e mode "$mode_system"
 
 bindsym $mod+r mode "resize"
-bindsym $mod+Shift+r exec --no-startup-id rstudio
 
 bindsym $mod+t exec --no-startup-id telegram-desktop
 
