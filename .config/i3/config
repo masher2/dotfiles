@@ -98,8 +98,8 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+f fullscreen toggle
 
 # Download managers
-bindsym $mod+g exec --no-startup-id uget-gtk
-bindsym $mod+Shift+g exec --no-startup-id deluge
+bindsym $mod+g exec --no-startup-id deluge
+bindsym $mod+Shift+g exec --no-startup-id uget-gtk
 
 # change focus
 bindsym $mod+h focus left
