@@ -21,6 +21,12 @@
 .config/R/library/
 .config/R/*.rds
 
+.config/vimb/closed
+.config/vimb/history
+.config/vimb/cookies.db
+.config/vimb/command
+.config/vimb/ws
+
 *.log
 
 notes.md
