@@ -31,11 +31,6 @@ interval=30
 label=⛁
 interval=30
 
-[bandwidth]
-interval=5
-inlabel=
-outlabel=
-
 [battery]
 command=~/work/Jesus/scripts/statusbar/battery BAT0
 interval=5
