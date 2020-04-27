@@ -49,9 +49,11 @@ fi
 
 # Environment variables ---------------------------------------------------- {{{
 
-export LEDGER_FILE="$HOME/Documents/masher.ldg"
+export LEDGER_FILE="$XDG_DOCUMENTS_DIR/masher.ldg"
 
 export PYTHONBREAKPOINT='ipdb.set_trace'
+
+export TIMELOG="$XDG_DOCUMENTS_DIR/timelog.ldg"
 
 # }}}
 
