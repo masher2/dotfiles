@@ -10,6 +10,7 @@
 
 # XDG Directories
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DESKTOP_DIR=$(xdg-user-dir DESKTOP)
 export XDG_DESKTOP_DIR=$(xdg-user-dir DESKTOP)
 export XDG_DOWNLOAD_DIR=$(xdg-user-dir DOWNLOAD)
@@ -20,9 +21,13 @@ export XDG_MUSIC_DIR=$(xdg-user-dir MUSIC)
 export XDG_PICTURES_DIR=$(xdg-user-dir PICTURES)
 export XDG_VIDEOS_DIR=$(xdg-user-dir VIDEOS)
 
-# R files
+# Cleanup
 export R_ENVIRON_USER=$XDG_CONFIG_HOME/R/environ
 export R_PROFILE_USER=$XDG_CONFIG_HOME/R/profile
+export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
+export GNUPGHOME=$XDG_DATA_HOME/gnupg
+export PASSWORD_STORE_DIR=$XDG_DATA_HOME/password-store
+
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
