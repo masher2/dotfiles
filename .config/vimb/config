@@ -78,3 +78,7 @@ set input-error-css=color:#f2777a;background-color:#393939;font:12pt DejaVu Sans
 set status-css=color:#ffcc66;background-color:#393939;font:12pt DejaVu Sans Mono;
 set status-ssl-css=color:#99cc99;background-color:#393939;font:12pt DejaVu Sans Mono;
 set status-ssl-invalid-css=color:#f2777a;background-color:#393939;font:12pt DejaVu Sans Mono;
+
+# better hinting
+set hint-keys-same-length=true
+set hint-keys=sadfjklewcmpgh
