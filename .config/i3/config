@@ -90,6 +90,7 @@ bindsym $mod+a focus parent
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout tabbed
+bindsym $mod+Shift+s sticky toggle
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -251,6 +252,7 @@ for_window [class="Matplotlib"] floating enable
 for_window [title="Choose one"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="MEGAsync"] floating enable
 
 for_window [class="vim-anywhere"] floating enable
 for_window [class="vim-anywhere"] resize set 800 500
@@ -283,7 +285,6 @@ assign [class="Mailspring"] $ws5
 set $browsers (s)urf, (b)rave, (f)irefox, (i)ncognito firefox
 mode "$browsers" {
     bindsym v exec --no-startup-id vimb, mode "default"
-    bindsym s exec --no-startup-id surf, mode "default"
     bindsym b exec --no-startup-id brave, mode "default"
     bindsym f exec --no-startup-id firefox, mode "default"
     bindsym i exec --no-startup-id firefox --private-window, mode "default"
