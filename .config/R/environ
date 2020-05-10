@@ -1,6 +1,6 @@
 # vim:ft=sh
 
 R_BROWSER='brave'
-R_LIBS=${XDG_CONFIG_HOME}/R/library/3.6
-TWITTER_PAT=${XDG_CONFIG_HOME}/R/rtweet_token.rds
+R_LIBS=${XDG_DATA_HOME}/R/library
+TWITTER_PAT=${XDG_DATA_HOME}/R/rtweet_token.rds
 
