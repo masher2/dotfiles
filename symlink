@@ -1,0 +1,28 @@
+#! /usr/bin/bash
+
+# Directory to store old configs to avoid deleting them by mistake
+old_configs=$HOME/old_configs
+[ -d $old_configs ] || mkdir $old_configs
+
+# Find all the items inside `config`
+config_dir=$(find config/ -mindepth 1 -maxdepth 1 -print)
+
+# Find all the $HOME config files
+new=$(find . -mindepth 1 -maxdepth 1 \
+    \( -name ".*" -o\
+    -name "README.md" -o\
+    -name "*ake*" -o\
+    -name "config" \) -prune -o\
+    -printf "%f\n")
+
+
+# Make symlinks for all the folders and config files, delete existing symlinks
+# and move non symliked configs to $old_configs
+for dir in $config_dir $new;
+do
+    config=$HOME/.$dir
+    [ -h $config ] && rm $config
+    [ -a $config ] && mv $config $old_configs
+    ln -s "$PWD/$dir" $config 
+done
+
