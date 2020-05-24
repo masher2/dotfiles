@@ -11,23 +11,26 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle/')
 Plugin 'VundleVim/Vundle.vim'            " Vundle
 Plugin 'christoomey/vim-tmux-navigator'  " Move between tmux and vim easily
-Plugin 'tpope/vim-fugitive'              " Git plugin 
+Plugin 'tpope/vim-fugitive'              " Git
 Plugin 'tpope/vim-commentary'            " Comments
 Plugin 'tpope/vim-surround'              " Surrounding text
 Plugin 'tpope/vim-vinegar'               " Explorer enhance
-Plugin 'tweekmonster/django-plus.vim'    " Django Plugin
-Plugin 'sheerun/vim-polyglot'            " Syntax highlighting for a lot of filetypes
-Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown plugin
-Plugin 'jalvesaq/Nvim-R'                 " R plugin
-Plugin 'ledger/vim-ledger'               " Ledger plugin
-Plugin 'rcaputo/vim-ledger_x'            " Ledger plugin
-Plugin 'python-mode/python-mode'         " Python plugin
+Plugin 'tweekmonster/django-plus.vim'    " Django
+Plugin 'sheerun/vim-polyglot'            " Syntax highlighting
+Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown
+Plugin 'jalvesaq/Nvim-R'                 " R
+Plugin 'ledger/vim-ledger'               " Ledger
+Plugin 'rcaputo/vim-ledger_x'            " Ledger
+Plugin 'python-mode/python-mode'         " Python
 Plugin 'davidhalter/jedi-vim'            " Python completion
 Plugin 'Yggdroot/indentLine'             " Show indenting
 Plugin 'masher2/readablefold.vim'        " Easier to read folding
 Plugin 'jceb/vim-orgmode'                " Orgmode
 Plugin 'mattn/calendar-vim'              " Calendar
 Plugin 'ap/vim-css-color'                " Hexadecimal color hints
+Plugin 'vimwiki/vimwiki'                 " Personal knowledge base
+Plugin 'junegunn/fzf'
+Plugin 'dylanaraps/fff.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -37,7 +40,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme bright
+colorscheme shine
 syntax on
 
 " Vertical splits always
@@ -233,6 +236,41 @@ autocmd FileType ledger set tabstop=2 shiftwidth=2 softtabstop=2
 
 " }}}
 
+" Vimwiki --------------------------------------------- {{{
+
+let g:vimwiki_list = [{'path': '~/Documents/wiki/'}]
+
+" }}}
+
+" FZF ------------------------------------------------- {{{
+
+let g:fzf_layout = {'window': {'width': 0.5, 'height': 0.5, 'yoffset': 1, 'xoffset': 0.1, 'border': 'bottom'}}
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Pmenu'],
+  \ 'bg':      ['bg', 'Pmenu'],
+  \ 'hl':      ['fg', 'Pmenu'],
+  \ 'fg+':     ['fg', 'PmenuSel'],
+  \ 'bg+':     ['bg', 'PmenuSel'],
+  \ 'hl+':     ['fg', 'PmenuSel'],
+  \ 'border':  ['fg', 'Pmenu'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" }}}
+
+" fff ------------------------------------------------- {{{
+
+let g:fff#split='new'
+
+if empty(maparg('-', 'n'))
+    nmap - :F<CR>
+endif
+
+" }}}
+
 " }}}
 
 " =====================================================
@@ -251,10 +289,10 @@ nnoremap U <C-r>
 " Leader ---------------------------------------------- {{{
 
 " Easier file navigation
-nnoremap <leader>e :find<Space>
-nnoremap <leader>t :tabfind<Space>
-nnoremap <leader>/ :sfind<Space>
-nnoremap <leader>\ :vert sfind<Space>
+nnoremap <leader>e :call fzf#run(fzf#wrap({'sink': 'e'}))<CR>
+nnoremap <leader>t :call fzf#run(fzf#wrap({'sink': 'tabedit'}))<CR>
+nnoremap <leader>/ :call fzf#run(fzf#wrap({'sink': 'sp'}))<CR>
+nnoremap <leader>\ :call fzf#run(fzf#wrap({'sink': 'vsp'}))<CR>
 
 " Easy copy to clipboard
 nnoremap <leader>y "+y

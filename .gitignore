@@ -1,31 +1,30 @@
-.vim/bundle/
-.vim/.netrwhist
+config/ipython/profile_default/history.sqlite
+config/ipython/profile_default/startup/
 
-.config/mpd/database
-.config/mpd/log
-.config/mpd/pid
-.config/mpd/playlists
-.config/mpd/state
-.config/mpd/sticker.sql
+config/mpd/database
+config/mpd/log
+config/mpd/pid
+config/mpd/playlists
+config/mpd/state
+config/mpd/sticker.sql
 
-.config/nvim/.netrwhist
-.config/nvim/bundle/
-.config/nvim/colors/
+config/nvim/.netrwhist
+config/nvim/bundle/
+config/nvim/colors/
 
-.config/ranger/bookmarks
-.config/ranger/devicons.*
-.config/ranger/history
-.config/ranger/plugins/
-.config/ranger/tagged
+config/ranger/bookmarks
+config/ranger/devicons.*
+config/ranger/history
+config/ranger/plugins/
+config/ranger/tagged
 
-.config/R/library/
-.config/R/*.rds
-
-.config/vimb/closed
-.config/vimb/history
-.config/vimb/cookies.db
-.config/vimb/command
-.config/vimb/ws
+config/vimb/closed
+config/vimb/history
+config/vimb/cookies.db
+config/vimb/command
+config/vimb/search
+config/vimb/ws
+config/vimb/ig
 
 *.log
 
