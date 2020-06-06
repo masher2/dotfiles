@@ -267,7 +267,7 @@ let g:fzf_colors =
 let g:fff#split='new'
 
 if empty(maparg('-', 'n'))
-    nmap - :F<CR>
+    nmap - :F %:h<CR>
 endif
 
 " }}}
