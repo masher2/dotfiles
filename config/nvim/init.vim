@@ -239,6 +239,7 @@ autocmd FileType ledger set tabstop=2 shiftwidth=2 softtabstop=2
 " Vimwiki --------------------------------------------- {{{
 
 let g:vimwiki_list = [{'path': '~/Documents/wiki/'}]
+let g:vimwiki_global_ext = 0
 
 " }}}
 
