@@ -31,6 +31,7 @@ Plugin 'ap/vim-css-color'                " Hexadecimal color hints
 Plugin 'vimwiki/vimwiki'                 " Personal knowledge base
 Plugin 'junegunn/fzf'
 Plugin 'dylanaraps/fff.vim'
+Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
 call vundle#end()
 
 filetype plugin indent on
@@ -189,6 +190,12 @@ autocmd FileType R,r,rmd nnoremap <buffer> <M-K> :call RFuncionMove('b')<CR>
 autocmd FileType R,r,rmd nmap <buffer> <F1> \rh
 autocmd FileType Rdoc,rdoc,rbrowser setlocal nofoldenable nonumber norelativenumber
 autocmd FileType rmd setlocal commentstring=#\ %s
+
+" }}}
+" Blogdown {{{
+
+let g:blogdown_content_dir = 'content'
+let g:blogdown_blogs = ['~/work/Jesus/masher2-blog/']
 
 " }}}
 
