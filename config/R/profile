@@ -34,10 +34,10 @@ if (.is_daytime()) {
 options(
   blogdown.author = "Jesús Pérez",
   blogdown.ext = ".Rmd",
-  blogdown.subdir = "posts"
+  blogdown.subdir = "posts",
+  blogdown.new_bundle = TRUE
 )
 
-if (file.exists("config.toml")) {
-  library(blogdown)
-}
+if (file.exists(".Renviron"))  source(".Renviron") 
+if (file.exists(".Rprofile"))  source(".Rprofile") 
 
