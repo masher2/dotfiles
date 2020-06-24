@@ -31,6 +31,7 @@ Plugin 'ap/vim-css-color'                " Hexadecimal color hints
 Plugin 'vimwiki/vimwiki'                 " Personal knowledge base
 Plugin 'junegunn/fzf'
 Plugin 'dylanaraps/fff.vim'
+Plugin 'goerz/jupytext.vim'
 Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
 call vundle#end()
 
@@ -232,6 +233,11 @@ autocmd FileType html,htmldjango :IndentLinesEnable
 autocmd FileType html,htmldjango set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType xml,css,sass,scss set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript set tabstop=2 shiftwidth=2 softtabstop=2
+
+" }}}
+" Ipython {{{
+
+" let g:jupytext_filetype_map = {'md': 'pandoc'}
 
 " }}}
 
