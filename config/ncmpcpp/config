@@ -425,7 +425,7 @@ locked_screen_width_part = 27
 
 ## Available values: none, basic, extended, perl.
 ##
-#regular_expressions = perl
+regular_expressions = extended
 
 ##
 ## Note: if below is enabled, ncmpcpp will ignore leading "The" word while
@@ -470,7 +470,7 @@ locked_screen_width_part = 27
 ##       database and local one for searching in current playlist)
 ##
 
-#search_engine_default_search_mode = 1
+search_engine_default_search_mode = 2
 
 #external_editor = nano
 
