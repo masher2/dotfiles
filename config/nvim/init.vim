@@ -125,13 +125,6 @@ autocmd FileType calendar setlocal nofoldenable
 
 " }}}
 
-" Orgmode --------------------------------------------- {{{
-
-let g:org_todo_keywords=['TODO', 'DOING', '|', 'DONE']
-let g:org_indent = 1
-
-" }}}
-
 " Netrw ----------------------------------------------- {{{
 
 let g:netrw_liststyle = 3
@@ -197,6 +190,7 @@ autocmd FileType rmd setlocal commentstring=#\ %s
 
 let g:blogdown_content_dir = 'content'
 let g:blogdown_blogs = ['~/work/Jesus/masher2-blog/']
+let g:blogdown_map_edit_post = 1
 
 " }}}
 
