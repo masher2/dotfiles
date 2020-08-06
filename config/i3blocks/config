@@ -22,6 +22,11 @@ command=setxkbmap -query | grep -oP 'layout:\s*\K(\w+)'
 interval=once
 signal=12
 
+[videomode]
+command=~/work/Jesus/scripts/statusbar/optimusmanager
+interval=once
+signal=13
+
 [memory]
 label=ram
 separator=false
