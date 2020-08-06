@@ -194,10 +194,14 @@ bindsym $mod+Shift+space floating toggle
 
 # F keys {{{
 
+bindsym $mod+F1 exec intrnt
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+F5 restart
 
 bindsym $mod+F7 exec passmenu
+
+bindsym $mod+F8 exec update-display
 
 # }}}
 
