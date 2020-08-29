@@ -189,7 +189,7 @@ bindsym $mod+space focus mode_toggle
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+Pause --release exec --no-startup-id xmodmap ~/.config/xmodmap 
+bindsym $mod+Pause exec --no-startup-id xmodmap ~/.config/xmodmap 
 
 # }}}
 
