@@ -33,7 +33,6 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id megasync
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id mpd
-exec --no-startup-id xmodmap /home/masher2/.config/xmodmap
 
 # }}}
 
@@ -189,6 +188,8 @@ bindsym $mod+space focus mode_toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+Pause --release exec --no-startup-id xmodmap ~/.config/xmodmap 
 
 # }}}
 
