@@ -55,7 +55,7 @@ shortcut-add ddg=https://duckduckgo.com/?q=$0
 shortcut-add d=http://dict.cc/?s=$0
 shortcut-add gh=https://github.com/search?q=$0
 shortcut-add yt=http://www.youtube.com/results?search_query=$0
-shortcut-add s=https://www.startpage.com/do/dsearch?query=$0
+shortcut-add s=https://searx.fmac.xyz/?q=$0
 
 # Set the shortcut as the default, that is the shortcut to be used if no
 # shortcut is given and the string to open is not an URI.
