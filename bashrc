@@ -55,6 +55,8 @@ export PYTHONBREAKPOINT='ipdb.set_trace'
 
 export TIMELOG="$XDG_DOCUMENTS_DIR/timelog.ldg"
 
+export PGDATA=/var/lib/postgres/data
+
 # }}}
 
 # Aliases ------------------------------------------------------------------ {{{
