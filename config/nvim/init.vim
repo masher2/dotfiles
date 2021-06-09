@@ -8,6 +8,8 @@ filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 
+ let g:polyglot_disabled = ['r-lang', 'python', 'tmux']
+
 call vundle#begin('~/.config/nvim/bundle/')
 Plugin 'VundleVim/Vundle.vim'            " Vundle
 Plugin 'christoomey/vim-tmux-navigator'  " Move between tmux and vim easily
@@ -116,12 +118,6 @@ autocmd FileType calendar setlocal nofoldenable
 " vim-tmux-navigator ---------------------------------- {{{
 
  let g:tmux_navigator_disable_when_zoomed = 1
-
-" }}}
-
-" vim-polyglot ---------------------------------------- {{{
-
- let g:polyglot_disabled = ['r-lang', 'python', 'tmux']
 
 " }}}
 
