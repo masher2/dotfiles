@@ -84,3 +84,6 @@ set status-ssl-invalid-css=color:#f2777a;background-color:#393939;font:12pt Deja
 # better hinting
 set hint-keys-same-length=true
 set hint-keys=sadfjklewcmpgh
+
+# Handlers
+handler-add magnet=xdg-open %s
