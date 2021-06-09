@@ -23,7 +23,7 @@ alias stree='tree -d -L 2 -I __*__'
 
 # Ledger aliases
 alias led="nvim $LEDGER_FILE"
-alias assets='ledger --no-total bal Assets'
+alias assets='ledger --no-total bal Assets and not Reimbursement'
 
 # Colorized commands
 alias ls='ls --color=auto'
