@@ -324,9 +324,9 @@ noremap <leader>f9 :set foldlevel=9<CR>
 " Git
 nnoremap <silent> <leader>gg :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>ga :Gcommit --amend<CR>
-nnoremap <silent> <leader>gA :Gcommit --amend --no-edit<CR>
+nnoremap <silent> <leader>gc :Git commit<CR>
+nnoremap <silent> <leader>ga :Git commit --amend<CR>
+nnoremap <silent> <leader>gA :Git commit --amend --no-edit<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <leader>gp :Gpush<CR>
 
