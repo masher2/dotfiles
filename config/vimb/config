@@ -56,10 +56,12 @@ shortcut-add d=http://dict.cc/?s=$0
 shortcut-add gh=https://github.com/search?q=$0
 shortcut-add yt=http://www.youtube.com/results?search_query=$0
 shortcut-add s=https://searx.fmac.xyz/?q=$0
+shortcut-add books=https://b-ok.lat/s/$0
+shortcut-add anime=https://nyaa.si/?q=$0
 
 # Set the shortcut as the default, that is the shortcut to be used if no
 # shortcut is given and the string to open is not an URI.
-shortcut-default s
+shortcut-default ddg
 
 # Map page zoom in normal mode to keys commonly used across applications
 # + (zoom in), - (zoom out), = (zoom reset)
