@@ -262,6 +262,7 @@ for_window [class="Matplotlib"] floating enable
 for_window [title="Choose one"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Cadence"] floating enable
 for_window [class="MEGAsync"] floating enable
 
 for_window [class="vim-anywhere"] floating enable
