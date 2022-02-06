@@ -83,6 +83,7 @@ bindsym $mod+o exec --no-startup-id $term newsboat
 
 bindsym $mod+p exec --no-startup-id projects
 bindsym $mod+Shift+p exec pavucontrol
+bindsym $mod+Ctrl+p exec --no-startup-id music-projects
 
 # }}}
 
