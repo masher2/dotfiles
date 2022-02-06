@@ -318,13 +318,13 @@ noremap <leader>f8 :set foldlevel=8<CR>
 noremap <leader>f9 :set foldlevel=9<CR>
 
 " Git
-nnoremap <silent> <leader>gg :Gstatus<CR>
+nnoremap <silent> <leader>gg :Git<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Git commit<CR>
 nnoremap <silent> <leader>ga :Git commit --amend<CR>
 nnoremap <silent> <leader>gA :Git commit --amend --no-edit<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <silent> <leader>gb :Git blame<CR>
+nnoremap <leader>gp :Git push<CR>
 
 " diffs
 nnoremap <leader>dt :diffthis<CR>
