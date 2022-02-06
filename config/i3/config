@@ -103,7 +103,7 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+f fullscreen toggle
 
 # Download managers
-bindsym $mod+g exec --no-startup-id deluge
+bindsym $mod+g exec --no-startup-id kitty -e deluge-console
 bindsym $mod+Shift+g exec --no-startup-id uget-gtk
 
 # change focus
