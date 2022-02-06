@@ -26,9 +26,11 @@ exec --no-startup-id /home/masher2/.fehbg
 exec --no-startup-id clipit
 exec --no-startup-id picom
 exec --no-startup-id dropboxd
+exec --no-startup-id deluged
 exec --no-startup-id mailspring
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
+exec --no-startup-id blueman-applet
 exec --no-startup-id redshift-gtk
 exec --no-startup-id megasync
 exec --no-startup-id syncthing -no-browser
