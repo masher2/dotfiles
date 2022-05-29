@@ -199,6 +199,8 @@ let g:blogdown_map_edit_post = 1
 let g:pymode_python = 'python3'
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_signs = 0
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>R'
 let g:pymode_options_colorcolumn = 0
 let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()'
 let g:jedi#use_splits_not_buffers = 'winwidth'
@@ -234,6 +236,8 @@ autocmd FileType javascript set tabstop=2 shiftwidth=2 softtabstop=2
 " }}}
 
 " Ledger ---------------------------------------------- {{{
+
+let g:ledger_winpos = 'R'
 
 autocmd FileType ledger set tabstop=2 shiftwidth=2 softtabstop=2
 
@@ -288,6 +292,7 @@ nnoremap Y y$
 " Redo with `U`
 nnoremap U <C-r>
 
+nnoremap - :call OpenFFF()<CR>
 " }}}
 
 " Leader ---------------------------------------------- {{{
@@ -416,5 +421,8 @@ autocmd BufEnter term://* :startinsert
 " Transform youtube file titles into markdown links
 command! Ytitle s~\s*\(.\+\)-\([A-z0-9_]\{11}\)\.\w\{3}$~[[video] \1](https://www.youtube.com/watch?v=\2)
 
+function OpenFFF()
+    execute 'F' . ' ' . expand('%:p:h')
+endfunction
 " }}}
 
