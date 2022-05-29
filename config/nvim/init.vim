@@ -19,6 +19,7 @@ Plugin 'tpope/vim-surround'              " Surrounding text
 Plugin 'tpope/vim-vinegar'               " Explorer enhance
 Plugin 'tweekmonster/django-plus.vim'    " Django
 Plugin 'sheerun/vim-polyglot'            " Syntax highlighting
+Plugin 'dense-analysis/ale'
 Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown
 Plugin 'jalvesaq/Nvim-R'                 " R
 Plugin 'ledger/vim-ledger'               " Ledger
@@ -269,13 +270,27 @@ let g:fzf_colors =
 
 " }}}
 
-" fff ------------------------------------------------- {{{
+" Ale ------------------------------------------------- {{{
 
-let g:fff#split='new'
+let g:ale_fixers = {
+    \ 'javascript': ['prettier'],
+    \ 'vue': ['prettier']
+    \ }
 
-if empty(maparg('-', 'n'))
-    nmap - :F %:h<CR>
-endif
+let g:ale_linters = {
+ \ 'javascript': ['eslint'],
+ \ 'vue': ['eslint'],
+ \ }
+
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
+" }}}
+
+" vue ------------------------------------------------- {{{
+
+autocmd FileType vue set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType vue setlocal foldnestmax=30
 
 " }}}
 
