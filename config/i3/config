@@ -17,7 +17,7 @@ smart_gaps on
 
 
 set $mod Mod4
-set $term --no-startup-id kitty -1 --listen-on unix:/tmp/kitty
+set $term --no-startup-id kitty -1
 set $postmusic pkill -RTMIN+11 i3blocks
 
 # Startup {{{
@@ -106,7 +106,7 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+f fullscreen toggle
 
 # Download managers
-bindsym $mod+g exec --no-startup-id kitty -e deluge-console
+bindsym $mod+g exec --no-startup-id $term -e deluge-console
 bindsym $mod+Shift+g exec --no-startup-id uget-gtk
 
 # change focus
@@ -138,7 +138,7 @@ bindsym $mod+Shift+c reload
 
 bindsym $mod+v exec --no-startup-id via
 
-bindsym $mod+b exec --no-startup-id kitty -e ranger
+bindsym $mod+b exec --no-startup-id $term -e ranger
 bindsym $mod+Shift+b exec --no-startup-id pcmanfm
 
 bindsym $mod+n exec ~/work/Jesus/vim-anywhere/vim_anywhere
