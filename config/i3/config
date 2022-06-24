@@ -23,6 +23,8 @@ set $postmusic pkill -RTMIN+11 i3blocks
 # Startup {{{
 
 exec --no-startup-id /home/masher2/.fehbg
+exec --no-startup-id xset s off
+exec --no-startup-id xset dpms 0 0 0
 exec --no-startup-id clipit
 exec --no-startup-id picom
 exec --no-startup-id dropboxd
