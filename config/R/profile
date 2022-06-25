@@ -14,7 +14,12 @@ local({
     after_7 & before_6
 }
 
-# If it's daytime set a light colorscheme for R console else go with 
+.install_nvimcom <- function() {
+  if (!require(devtools))  install.packages("devtools")
+  devtools::install("~/.config/nvim/bundle/Nvim-R/R/nvimcom/")
+}
+
+# If it's daytime set a light colorscheme for R console else go with
 # the default dark one
 if (.is_daytime()) {
     colorout::setOutputColors(
@@ -38,6 +43,5 @@ options(
   blogdown.new_bundle = TRUE
 )
 
-if (file.exists(".Renviron"))  source(".Renviron") 
-if (file.exists(".Rprofile"))  source(".Rprofile") 
-
+if (file.exists(".Renviron")) source(".Renviron")
+if (file.exists(".Rprofile")) source(".Rprofile")
