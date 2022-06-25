@@ -78,6 +78,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e mode "$mode_system"
 
 bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r reload
 
 bindsym $mod+Shift+t exec --no-startup-id telegram-desktop
 
@@ -134,7 +135,8 @@ bindsym $mod+Ctrl+l exec --no-startup-id i3resize right
 bindsym $mod+Shift+x exec --no-startup-id betterlockscreen -l dim
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+c exec --no-startup-id changetheme
+bindsym $mod+Shift+c exec --no-startup-id tmux new-window -t servers droidcam-cli adb 474 
 
 bindsym $mod+v exec --no-startup-id via
 
