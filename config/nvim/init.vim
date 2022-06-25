@@ -241,6 +241,9 @@ autocmd FileType javascript set tabstop=2 shiftwidth=2 softtabstop=2
 let g:ledger_winpos = 'R'
 
 autocmd FileType ledger set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType ledger nnoremap <Enter> :Bal<CR>
+autocmd FileType ledger nnoremap <M-b> :Ledger bal 
+autocmd FileType ledger nnoremap <M-r> :Ledger reg 
 
 " }}}
 
