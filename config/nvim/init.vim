@@ -328,6 +328,9 @@ nnoremap <leader>Y "+Y
 " Toggle indent lines
 nnoremap <leader>il :IndentLinesToggle<CR>
 
+" Toggle indent lines
+nnoremap <leader>C :call SwitchColorColumn()<CR>
+
 " Set folding levels
 noremap <leader>f0 :set foldlevel=0<CR>
 noremap <leader>f1 :set foldlevel=1<CR>
@@ -438,6 +441,14 @@ autocmd BufEnter term://* :startinsert
 
 " Transform youtube file titles into markdown links
 command! Ytitle s~\s*\(.\+\)-\([A-z0-9_]\{11}\)\.\w\{3}$~[[video] \1](https://www.youtube.com/watch?v=\2)
+
+function SwitchColorColumn()
+    if &colorcolumn == 80
+        set colorcolumn=
+    else
+        set colorcolumn=80
+    endif
+endfunction
 
 function OpenFFF()
     execute 'F' . ' ' . expand('%:p:h')
