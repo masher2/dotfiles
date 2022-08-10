@@ -32,9 +32,10 @@ Plugin 'jceb/vim-orgmode'                " Orgmode
 Plugin 'mattn/calendar-vim'              " Calendar
 Plugin 'ap/vim-css-color'                " Hexadecimal color hints
 Plugin 'vimwiki/vimwiki'                 " Personal knowledge base
-Plugin 'junegunn/fzf'
-Plugin 'dylanaraps/fff.vim'
-Plugin 'goerz/jupytext.vim'
+Plugin 'hashivim/vim-terraform'          " Terraform
+Plugin 'junegunn/fzf'                    " Fuzzy finder
+Plugin 'dylanaraps/fff.vim'              " Use fff as a file explorer
+Plugin 'goerz/jupytext.vim'              " Edit Jupyter notebooks as markdown
 Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
 call vundle#end()
 
