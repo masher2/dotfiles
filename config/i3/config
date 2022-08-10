@@ -143,6 +143,7 @@ bindsym $mod+v exec --no-startup-id via
 
 bindsym $mod+b exec --no-startup-id $term -e ranger
 bindsym $mod+Shift+b exec --no-startup-id pcmanfm
+bindsym $mod+Ctrl+b exec --no-startup-id tmux new-window -t servers bc -l
 
 bindsym $mod+n exec ~/work/Jesus/vim-anywhere/vim_anywhere
 bindsym $mod+Shift+n exec ~/work/Jesus/vim-anywhere/vim_anywhere -c
