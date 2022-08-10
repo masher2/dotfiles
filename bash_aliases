@@ -41,3 +41,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias vwk='nvim -c VimwikiIndex'
+
+# Work related aliases
+alias docker='sudo docker'
+alias dockerc='sudo docker-compose'
+alias tf='terraform'
