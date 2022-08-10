@@ -323,7 +323,7 @@ nnoremap <leader>\ :call fzf#run(fzf#wrap({'sink': 'vsp'}))<CR>
 
 " Easy copy to clipboard
 nnoremap <leader>y "+y
-nnoremap <leader>Y "+Y
+nnoremap <leader>Y "+y$
 
 " Toggle indent lines
 nnoremap <leader>il :IndentLinesToggle<CR>
