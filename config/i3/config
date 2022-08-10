@@ -17,7 +17,7 @@ smart_gaps on
 
 
 set $mod Mod4
-set $term --no-startup-id kitty -1
+set $term --no-startup-id kitty -1 --listen-on unix:/tmp/kitty
 set $postmusic pkill -RTMIN+11 i3blocks
 
 # Startup {{{
