@@ -134,7 +134,7 @@ bindsym $mod+Shift+x exec --no-startup-id betterlockscreen -l dim
 
 # reload the configuration file
 bindsym $mod+c exec --no-startup-id changetheme
-bindsym $mod+Shift+c exec --no-startup-id tmux new-window -t servers droidcam-cli adb 474 
+bindsym $mod+Shift+c exec --no-startup-id tmux new-window -t servers droidcam-cli adb 4747
 
 bindsym $mod+v exec --no-startup-id via
 
