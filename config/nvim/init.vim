@@ -36,6 +36,7 @@ Plugin 'hashivim/vim-terraform'          " Terraform
 Plugin 'junegunn/fzf'                    " Fuzzy finder
 Plugin 'dylanaraps/fff.vim'              " Use fff as a file explorer
 Plugin 'goerz/jupytext.vim'              " Edit Jupyter notebooks as markdown
+Plugin 'tpope/vim-repeat'                " Repeat plugin maps
 Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
 call vundle#end()
 
@@ -175,6 +176,8 @@ endfunction "}}}
 
 autocmd FileType R,r,rmd nnoremap <buffer> <M-J> :call RFuncionMove('')<CR>
 autocmd FileType R,r,rmd nnoremap <buffer> <M-K> :call RFuncionMove('b')<CR>
+autocmd FileType rmd nnoremap <buffer> [[ ?^```{<CR>
+autocmd FileType rmd nnoremap <buffer> ]] /^```{<CR>
 
 " }}}
 " R help {{{
@@ -295,6 +298,12 @@ let g:ale_fix_on_save = 1
 
 autocmd FileType vue set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType vue setlocal foldnestmax=30
+
+" }}}
+
+" Terraform ------------------------------------------- {{{
+
+let g:terraform_fmt_on_save = 1
 
 " }}}
 
