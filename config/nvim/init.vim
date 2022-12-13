@@ -8,35 +8,37 @@ filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 
- let g:polyglot_disabled = ['r-lang', 'python', 'tmux']
+let g:polyglot_disabled = ['r-lang', 'python', 'tmux']
 
 call vundle#begin('~/.config/nvim/bundle/')
-Plugin 'VundleVim/Vundle.vim'            " Vundle
-Plugin 'christoomey/vim-tmux-navigator'  " Move between tmux and vim easily
-Plugin 'tpope/vim-fugitive'              " Git
-Plugin 'tpope/vim-commentary'            " Comments
-Plugin 'tpope/vim-surround'              " Surrounding text
-Plugin 'tpope/vim-vinegar'               " Explorer enhance
-Plugin 'tweekmonster/django-plus.vim'    " Django
-Plugin 'sheerun/vim-polyglot'            " Syntax highlighting
+Plugin 'VundleVim/Vundle.vim'             " Vundle
+Plugin 'christoomey/vim-tmux-navigator'   " Move between tmux and vim easily
+Plugin 'tpope/vim-fugitive'               " Git
+Plugin 'tpope/vim-commentary'             " Comments
+Plugin 'tpope/vim-surround'               " Surrounding text
+Plugin 'tpope/vim-vinegar'                " Explorer enhance
+Plugin 'tweekmonster/django-plus.vim'     " Django
+Plugin 'sheerun/vim-polyglot'             " Syntax highlighting
 Plugin 'dense-analysis/ale'
-Plugin 'vim-pandoc/vim-pandoc-syntax'    " Markdown
-Plugin 'jalvesaq/Nvim-R'                 " R
-Plugin 'ledger/vim-ledger'               " Ledger
-Plugin 'rcaputo/vim-ledger_x'            " Ledger
-Plugin 'python-mode/python-mode'         " Python
-Plugin 'davidhalter/jedi-vim'            " Python completion
-Plugin 'Yggdroot/indentLine'             " Show indenting
-Plugin 'masher2/readablefold.vim'        " Easier to read folding
-Plugin 'jceb/vim-orgmode'                " Orgmode
-Plugin 'mattn/calendar-vim'              " Calendar
-Plugin 'ap/vim-css-color'                " Hexadecimal color hints
-Plugin 'vimwiki/vimwiki'                 " Personal knowledge base
-Plugin 'hashivim/vim-terraform'          " Terraform
-Plugin 'junegunn/fzf'                    " Fuzzy finder
-Plugin 'dylanaraps/fff.vim'              " Use fff as a file explorer
-Plugin 'goerz/jupytext.vim'              " Edit Jupyter notebooks as markdown
-Plugin 'tpope/vim-repeat'                " Repeat plugin maps
+Plugin 'vim-pandoc/vim-pandoc-syntax'     " Markdown
+Plugin 'jalvesaq/Nvim-R'                  " R
+Plugin 'ledger/vim-ledger'                " Ledger
+Plugin 'rcaputo/vim-ledger_x'             " Ledger
+Plugin 'python-mode/python-mode'          " Python
+Plugin 'davidhalter/jedi-vim'             " Python completion
+Plugin 'Yggdroot/indentLine'              " Show indenting
+Plugin 'masher2/readablefold.vim'         " Easier to read folding
+Plugin 'jceb/vim-orgmode'                 " Orgmode
+Plugin 'mattn/calendar-vim'               " Calendar
+Plugin 'ap/vim-css-color'                 " Hexadecimal color hints
+Plugin 'vimwiki/vimwiki'                  " Personal knowledge base
+Plugin 'hashivim/vim-terraform'           " Terraform
+Plugin 'junegunn/fzf'                     " Fuzzy finder
+Plugin 'dylanaraps/fff.vim'               " Use fff as a file explorer
+Plugin 'goerz/jupytext.vim'               " Edit Jupyter notebooks as markdown
+Plugin 'tpope/vim-repeat'                 " Repeat plugin maps
+Plugin 'tpope/vim-scriptease'
+Plugin 'altercation/vim-colors-solarized' " Solarized
 Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
 call vundle#end()
 
@@ -47,7 +49,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme shine
+colorscheme solarized
 syntax on
 
 " Vertical splits always

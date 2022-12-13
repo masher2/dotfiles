@@ -20,6 +20,7 @@ alias tnew='tmux new -s "${PWD##*/}"'
 # Utils
 alias tree='tree -I __pycache__'
 alias stree='tree -d -L 2 -I __*__'
+alias audio2hdmi='pacmd set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo-extra1'
 
 # Ledger aliases
 alias led="nvim $LEDGER_FILE"
