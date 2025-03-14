@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /usr/bin/env bash
 
 # Directory to store old configs to avoid deleting them by mistake
 old_configs=$HOME/old_configs

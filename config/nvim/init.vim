@@ -1,5 +1,6 @@
 " vim:foldmethod=marker
 set mouse=a
+set termguicolors
 
 filetype off
 
@@ -12,34 +13,47 @@ let g:polyglot_disabled = ['r-lang', 'python', 'tmux']
 
 call vundle#begin('~/.config/nvim/bundle/')
 Plugin 'VundleVim/Vundle.vim'             " Vundle
+
+" System integration 
 Plugin 'christoomey/vim-tmux-navigator'   " Move between tmux and vim easily
-Plugin 'tpope/vim-fugitive'               " Git
+
+" General functionality
 Plugin 'tpope/vim-commentary'             " Comments
+Plugin 'tpope/vim-fugitive'               " Git
+Plugin 'tpope/vim-repeat'                 " Repeat plugin maps
 Plugin 'tpope/vim-surround'               " Surrounding text
 Plugin 'tpope/vim-vinegar'                " Explorer enhance
-Plugin 'tweekmonster/django-plus.vim'     " Django
-Plugin 'sheerun/vim-polyglot'             " Syntax highlighting
-Plugin 'dense-analysis/ale'
-Plugin 'vim-pandoc/vim-pandoc-syntax'     " Markdown
+Plugin 'dylanaraps/fff.vim'               " Use fff as a file explorer
+Plugin 'mattn/calendar-vim'               " Calendar
+Plugin 'junegunn/fzf'                     " Fuzzy finder
+
+" Readability
+Plugin 'masher2/readablefold.vim'         " Easier to read folding
+Plugin 'Yggdroot/indentLine'              " Show indenting
+Plugin 'ap/vim-css-color'                 " Hexadecimal color hints
+
+" Languages plugins
 Plugin 'jalvesaq/Nvim-R'                  " R
 Plugin 'ledger/vim-ledger'                " Ledger
 Plugin 'rcaputo/vim-ledger_x'             " Ledger
+Plugin 'hashivim/vim-terraform'           " Terraform
 Plugin 'python-mode/python-mode'          " Python
 Plugin 'davidhalter/jedi-vim'             " Python completion
-Plugin 'Yggdroot/indentLine'              " Show indenting
-Plugin 'masher2/readablefold.vim'         " Easier to read folding
-Plugin 'jceb/vim-orgmode'                 " Orgmode
-Plugin 'mattn/calendar-vim'               " Calendar
-Plugin 'ap/vim-css-color'                 " Hexadecimal color hints
-Plugin 'vimwiki/vimwiki'                  " Personal knowledge base
-Plugin 'hashivim/vim-terraform'           " Terraform
-Plugin 'junegunn/fzf'                     " Fuzzy finder
-Plugin 'dylanaraps/fff.vim'               " Use fff as a file explorer
+
+" Plugin 'tweekmonster/django-plus.vim'     " Django
+Plugin 'sheerun/vim-polyglot'             " Syntax highlighting
+" Plugin 'dense-analysis/ale'
+" Plugin 'vim-pandoc/vim-pandoc'
+" Plugin 'vim-pandoc/vim-pandoc-syntax'
+" Plugin 'jceb/vim-orgmode'                 " Orgmode
+" Plugin 'vimwiki/vimwiki'                  " Personal knowledge base
 Plugin 'goerz/jupytext.vim'               " Edit Jupyter notebooks as markdown
-Plugin 'tpope/vim-repeat'                 " Repeat plugin maps
-Plugin 'tpope/vim-scriptease'
-Plugin 'altercation/vim-colors-solarized' " Solarized
-Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
+" Plugin 'tpope/vim-scriptease'
+" Plugin 'quarto-dev/quarto-nvim'
+" Plugin 'neovim/nvim-lspconfig'
+" Plugin 'jmbuhr/otter.nvim'
+" Plugin 'altercation/vim-colors-solarized' " Solarized
+" Plugin 'file:///home/masher2/work/Jesus/blogdown.vim/', {'pinned': 1}
 call vundle#end()
 
 filetype plugin indent on
@@ -49,7 +63,7 @@ filetype plugin indent on
 " =====================================================
 " UI -------------------------------------------------- {{{
 
-colorscheme solarized
+colorscheme lucario
 syntax on
 
 " Vertical splits always
@@ -196,6 +210,19 @@ let g:blogdown_blogs = ['~/work/Jesus/masher2-blog/']
 let g:blogdown_map_edit_post = 1
 
 " }}}
+" Quarto {{{
+
+" lua << EOF
+" local quarto = require('quarto')
+" local runner = require('quarto.runner')
+" quarto.setup()
+" vim.keymap.set("n", "<M-CR>", runner.run_cell,  { desc = "run cell", silent = true })
+" vim.keymap.set("n", "<localleader>ra", runner.run_all,   { desc = "run all cells", silent = true })
+" vim.keymap.set("n", "<CR>", runner.run_line,  { desc = "run line", silent = true })
+" vim.keymap.set("v", "<localleader>r",  runner.run_range, { desc = "run visual range", silent = true })
+" EOF
+
+" }}}
 
 " }}}
 
@@ -221,6 +248,8 @@ autocmd FileType python setlocal wrap
 
 autocmd FileType python nnoremap <buffer> <M-J> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
 autocmd FileType python nnoremap <buffer> <M-K> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
+autocmd FileType python nnoremap <buffer> <M-]> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', '')<CR>
+autocmd FileType python nnoremap <buffer> <M-[> :call pymode#motion#move('^\s*\(async\s\+\)\=def\s', 'b')<CR>
 
 " }}}
 " Django {{{
@@ -236,7 +265,7 @@ autocmd FileType javascript set tabstop=2 shiftwidth=2 softtabstop=2
 " }}}
 " Ipython {{{
 
-" let g:jupytext_filetype_map = {'md': 'pandoc'}
+let g:jupytext_filetype_map = {'md': 'pandoc'}
 
 " }}}
 
@@ -305,7 +334,7 @@ autocmd FileType vue setlocal foldnestmax=30
 
 " Terraform ------------------------------------------- {{{
 
-let g:terraform_fmt_on_save = 1
+let g:terraform_fmt_on_save = 0
 
 " }}}
 
