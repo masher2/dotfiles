@@ -27,6 +27,7 @@ config/vimb/ws
 config/vimb/ig
 
 *.log
+**/.DS_store
 
 notes.md
 
