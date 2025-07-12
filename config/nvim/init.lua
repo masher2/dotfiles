@@ -242,50 +242,48 @@ vim.api.nvim_create_autocmd('UIEnter', {
 })
 -- }}}
 
-    vim.o.mouse = 'a'
-    vim.o.confirm = true
-    vim.o.swapfile = false
+vim.o.mouse = 'a'
+vim.o.confirm = true
+vim.o.swapfile = false
 
-    -- Line numbers
-    vim.o.number = true
-    vim.o.relativenumber = true
+-- Line numbers
+vim.o.number = true
+vim.o.relativenumber = true
 
-    -- Cursor line
-    local cursorline = vim.api.nvim_create_augroup('cursorline', {clear = true})
-    vim.api.nvim_create_autocmd(
-        {'VimEnter', 'WinEnter', 'BufWinEnter'},
-        {pattern = '*', group = cursorline, callback = function() vim.opt_local.cursorline = true end }
-    )
-    vim.api.nvim_create_autocmd(
-        {'WinLeave'},
-        {pattern = '*', group = cursorline, callback = function() vim.opt_local.cursorline = false end }
-    )
+-- Cursor line
+local cursorline = vim.api.nvim_create_augroup('cursorline', {clear = true})
+vim.api.nvim_create_autocmd(
+    {'VimEnter', 'WinEnter', 'BufWinEnter'},
+    {pattern = '*', group = cursorline, callback = function() vim.opt_local.cursorline = true end }
+)
+vim.api.nvim_create_autocmd(
+    {'WinLeave'},
+    {pattern = '*', group = cursorline, callback = function() vim.opt_local.cursorline = false end }
+)
 
-    -- split in the right direction
-    vim.o.splitbelow = true
-    vim.o.splitright = true
+-- split in the right direction
+vim.o.splitbelow = true
+vim.o.splitright = true
 
-    -- Remove min size limitations for when maximizing splits
-    vim.o.winminheight = 0
-    vim.o.winminwidth = 0
+-- Remove min size limitations for when maximizing splits
+vim.o.winminheight = 0
+vim.o.winminwidth = 0
 
-    -- indent with 4 spaces
-    local tabwidth = 4
-    vim.o.tabstop = tabwidth
-    vim.o.shiftwidth = tabwidth
-    vim.o.softtabstop = tabwidth
-    vim.o.expandtab = true
-    vim.o.shiftround = true
-    vim.cmd.highlight('IndentLine guifg=#2b3e50')
-    vim.cmd.highlight('IndentLineCurrent guifg=#f8f8f2')
+-- indent with 4 spaces
+local tabwidth = 4
+vim.o.tabstop = tabwidth
+vim.o.shiftwidth = tabwidth
+vim.o.softtabstop = tabwidth
+vim.o.expandtab = true
+vim.o.shiftround = true
 
-    -- folds
-    vim.o.foldmethod = 'indent'
-    vim.o.foldnestmax = 5
+-- folds
+vim.o.foldmethod = 'indent'
+vim.o.foldnestmax = 5
 
-    -- Show <tab> and trailing spaces
-    vim.o.list = true
-    vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- Show <tab> and trailing spaces
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- }}}
 
