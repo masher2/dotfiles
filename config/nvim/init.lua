@@ -114,6 +114,13 @@ require('lazy').setup({
                 }
             }
         },
+        {   -- Hexadecimal color hints
+            'norcalli/nvim-colorizer.lua', 
+            init = function ()
+                vim.o.termguicolors = true
+            end,
+            opts = { '*' }
+        },
         { 'nvimdev/indentmini.nvim', config = true },  -- Indent lines
         {   -- File explorer
             'stevearc/oil.nvim',
