@@ -75,6 +75,45 @@ require('lazy').setup({
             }
         },
 
+        -- nvim plugins
+        {
+            'catppuccin/nvim',
+            name = 'catppuccin',
+            priority = 1000,
+            opts = {
+                background = {
+                    light = 'latte',
+                    dark = 'frappe'
+                },
+                custom_highlights = function(colors)
+                    return {
+                        IndentLine = { fg = colors.base },
+                        IndentLineCurrent = { fg = colors.overlay1 }
+                    }
+                end
+            }
+        },
+        {
+            'maxmx03/solarized.nvim',
+            lazy = false,
+            priority = 1000,
+            variant = 'summer',
+            opts = {
+                on_highlights = function(colors, color)
+                    return {
+                        DiffAdd = { reverse = false, fg = 'NONE', bg = '#d0e2d2' },
+                        DiffDelete = { reverse = false, fg = 'NONE', bg = '#eac8d4' },
+                        DiffChange = { reverse = false, fg = 'NONE', bg = '#e0e7f6' },
+                        DiffText = { reverse = false , fg = 'NONE', bg = '#b0c8d4' },
+                        IndentLine = { fg = colors.base3 },
+                        IndentLineCurrent = { fg = colors.base00 }
+                    }
+                end,
+                styles = {
+                    comments = { italic = true }
+                }
+            }
+        },
         { 'nvimdev/indentmini.nvim', config = true },  -- Indent lines
         {   -- File explorer
             'stevearc/oil.nvim',
