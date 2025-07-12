@@ -22,35 +22,19 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require('lazy').setup({
     spec = {
+        -- Vim plugins
         'tpope/vim-repeat',  -- Repeat plugin maps
         'tpope/vim-surround',  -- Add surrounding text movements
         'mattn/calendar-vim',  -- Calendar
-        'ap/vim-css-color',  -- Hexadecimal color hints
         {   -- Improve comment motions
             'tpope/vim-commentary',
             enabled = false
         },
-        {   -- Indent lines
-            'nvimdev/indentmini.nvim',
-            config = function()
-                require('indentmini').setup()
+        {   -- Syntax highlighting
+            'sheerun/vim-polyglot',
+            init = function()
+                vim.g.polyglot_disabled = {'r-lang', 'python', 'tmux'}
             end
-        },
-        {   -- File explorer
-            'stevearc/oil.nvim',
-            config = function()
-                require('oil').setup({
-                    default_file_explorer = true,
-                    view_options = {
-                        show_hidden = true
-                    },
-                    keymaps = {
-                        ["<C-c>"] = false,
-                        ["q"] = "actions.close",
-                    },
-                })
-            end,
-            lazy = false
         },
         {
             "christoomey/vim-tmux-navigator",
@@ -60,15 +44,6 @@ require('lazy').setup({
                 { "<c-k>", "<cmd>TmuxNavigateUp<cr>", mode = {'n', 't'} },
                 { "<c-l>", "<cmd>TmuxNavigateRight<cr>", mode = {'n', 't'} },
             },
-        },
-        {   -- Fuzzy finder
-            'junegunn/fzf',
-            keys = {
-                { '<leader>e', ':call fzf#run(fzf#wrap({"sink": "e"}))<CR>' },
-                { '<leader>t', ':call fzf#run(fzf#wrap({"sink": "tabedit"}))<CR>' },
-                { '<leader>/', ':call fzf#run(fzf#wrap({"sink": "sp"}))<CR>' },
-                { '<leader>\\', ':call fzf#run(fzf#wrap({"sink": "vsp"}))<CR>' },
-            }
         },
         {   -- Git integration
             'tpope/vim-fugitive',
@@ -82,12 +57,6 @@ require('lazy').setup({
                 { '<leader>gp', '<cmd>Git push<cr>' },
             },
         },
-        {   -- Syntax highlighting
-            'sheerun/vim-polyglot',
-            init = function()
-                vim.g.polyglot_disabled = {'r-lang', 'python', 'tmux'}
-            end
-        },
         {   -- Improve code folds' format
             'masher2/readablefold.vim',
             init = function()
@@ -96,8 +65,31 @@ require('lazy').setup({
                 vim.g['readablefold#tabstop_char'] = '-'
             end
         },
+        {   -- Fuzzy finder
+            'junegunn/fzf',
+            keys = {
+                { '<leader>e', ':call fzf#run(fzf#wrap({"sink": "e"}))<CR>' },
+                { '<leader>t', ':call fzf#run(fzf#wrap({"sink": "tabedit"}))<CR>' },
+                { '<leader>/', ':call fzf#run(fzf#wrap({"sink": "sp"}))<CR>' },
+                { '<leader>\\', ':call fzf#run(fzf#wrap({"sink": "vsp"}))<CR>' },
+            }
+        },
+
+        { 'nvimdev/indentmini.nvim', config = true },  -- Indent lines
+        {   -- File explorer
+            'stevearc/oil.nvim',
+            opts = {
+                default_file_explorer = true,
+                view_options = { show_hidden = true },
+                keymaps = {
+                    ['<C-c>'] = false,
+                    ['q'] = 'actions.close', 
+                },
+            },
+            lazy = false
+        },
     },
-    install = { missing = true, colorscheme = { 'lucario' } },
+    install = { missing = true },
     checker = { enabled = true },
 })
 
