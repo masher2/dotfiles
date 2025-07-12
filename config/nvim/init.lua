@@ -207,7 +207,41 @@ require('lazy').setup({
 -- }}}
 
 -- UI configs {{{
-    vim.cmd.colorscheme('lucario')
+
+-- Auto colorscheme change {{{
+function createSocket()
+    pid = vim.fn.getpid()
+    socket_name = '/tmp/nvim/nvim' .. pid .. '.sock'
+    vim.fn.mkdir('/tmp/nvim', 'p')
+    vim.fn.serverstart(socket_name)
+end
+
+function updateColorscheme()
+    exit_code = os.execute("defaults read -g AppleInterfaceStyle")
+    if exit_code == 0 then
+        vim.cmd.colorscheme('catppuccin-frappe')
+    else
+        vim.cmd.colorscheme('solarized')
+    end
+end
+
+vim.api.nvim_create_augroup('custom_startup', {})
+
+vim.api.nvim_create_autocmd('VimEnter', {
+    desc = 'Create a socket for every nvim process',
+    group = 'custom_startup',
+    once = true,
+    callback = createSocket
+})
+
+vim.api.nvim_create_autocmd('UIEnter', {
+    desc = 'Set the appropriate theme on startup',
+    group = 'custom_startup',
+    once = true,
+    callback = updateColorscheme
+})
+-- }}}
+
     vim.o.mouse = 'a'
     vim.o.confirm = true
     vim.o.swapfile = false
