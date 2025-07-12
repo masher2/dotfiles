@@ -76,6 +76,7 @@ require('lazy').setup({
         },
 
         -- nvim plugins
+        {'vhyrro/luarocks.nvim', priority = 1000, config = true },  -- luarocks support
         {
             'catppuccin/nvim',
             name = 'catppuccin',
@@ -133,6 +134,69 @@ require('lazy').setup({
                 },
             },
             lazy = false
+        },
+        {
+            'nvim-treesitter/nvim-treesitter',
+            branch = 'master',
+            lazy = false,
+            build = ':TSUpdate',
+            main = 'nvim-treesitter.configs',
+            opts = {
+                ensure_installed = {
+                    'bash',
+                    'comment',
+                    'dockerfile',
+                    'git_config',
+                    'gitcommit',
+                    'gitignore',
+                    'lua',
+                    'luadoc',
+                    'norg',
+                    'r',
+                    'regex',
+                    'sql',
+                    'terraform',
+                    'toml',
+                    'typescript',
+                    'vim',
+                    'vimdoc',
+                    'yaml',
+                },
+                auto_install = true,
+                highlight = {
+                    enable = true,
+                    disable = {'csv', 'tsv'},
+                },
+                -- TODO: Check keybinds
+                incemental_selection = {
+                    enable = true
+                },
+                indent = {
+                    enable = true
+                }
+            }
+        },
+        {
+            'nvim-neorg/neorg',
+            lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+            version = "*", -- Pin Neorg to the latest stable release
+            dependencies = { 'luarocks.nvim' },
+            config = function()
+                require('neorg').setup {
+                    load = {
+                        ['core.defaults'] = {},
+                        ['core.concealer'] = {},
+                        ['core.dirman'] = {
+                            config = {
+                                workspaces = {
+                                    notes = '~/notes',
+                                },
+                                default_workspace = 'notes',
+                            },
+                        },
+                    },
+                }
+            end
         },
     },
     install = { missing = true },
