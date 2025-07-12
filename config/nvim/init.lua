@@ -296,6 +296,9 @@ vim.keymap.set('n', 'U', '<C-r>')
 vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+y$')
 
+-- Clear search highlight
+vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
+
 -- Window resizing
 vim.keymap.set('n', '<leader>w', '<C-w>')
 vim.keymap.set('n', '<leader>wz', '<C-w>_<C-w>|')
@@ -354,5 +357,10 @@ vim.keymap.set('n', '<M-Space>', 'zA')
 for i = 0, 9 do
     vim.keymap.set('n', '<leader>f'..i, ':set foldlevel='..i..'<cr>')
 end
+
+-- }}}
+
+-- Other configs {{{
+vim.g.python3_host_prog = vim.fn.expand('~/.venvs/Documents/bin/python')
 
 -- }}}
