@@ -289,70 +289,70 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Key bindings {{{
 
-    -- Redo
-    vim.keymap.set('n', 'U', '<C-r>')
+-- Redo
+vim.keymap.set('n', 'U', '<C-r>')
 
-    -- Copy into clipboard
-    vim.keymap.set('n', '<leader>y', '"+y')
-    vim.keymap.set('n', '<leader>Y', '"+y$')
+-- Copy into clipboard
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+y$')
 
-    -- Window resizing
-    vim.keymap.set('n', '<leader>w', '<C-w>')
-    vim.keymap.set('n', '<leader>wz', '<C-w>_<C-w>|')
-    vim.keymap.set('n', '<leader>w\\', '<cmd>exec "vertical resize " (&numberwidth + 80)<cr>')
-    vim.keymap.set('n', '<leader>w/', '<cmd>resize 40<cr>')
-    vim.keymap.set('n', '<leader>w,', '10<C-w><')
-    vim.keymap.set('n', '<leader>w.', '10<C-w>>')
+-- Window resizing
+vim.keymap.set('n', '<leader>w', '<C-w>')
+vim.keymap.set('n', '<leader>wz', '<C-w>_<C-w>|')
+vim.keymap.set('n', '<leader>w\\', '<cmd>exec "vertical resize " (&numberwidth + 80)<cr>')
+vim.keymap.set('n', '<leader>w/', '<cmd>resize 40<cr>')
+vim.keymap.set('n', '<leader>w,', '10<C-w><')
+vim.keymap.set('n', '<leader>w.', '10<C-w>>')
 
-    -- Manual diffs
-    vim.keymap.set('n', '<leader>dt', '<cmd>diffthis<cr>')
-    vim.keymap.set('n', '<leader>do', '<cmd>diffoff<cr>')
+-- Manual diffs
+vim.keymap.set('n', '<leader>dt', '<cmd>diffthis<cr>')
+vim.keymap.set('n', '<leader>do', '<cmd>diffoff<cr>')
 
-    -- Saving and quitting
-    vim.keymap.set('n', '<M-w>', '<cmd>w<cr>')
-    vim.keymap.set('n', '<M-q>', '<cmd>q<cr>')
+-- Saving and quitting
+vim.keymap.set('n', '<M-w>', '<cmd>w<cr>')
+vim.keymap.set('n', '<M-q>', '<cmd>q<cr>')
 
-    -- Tab Navigation
-    vim.keymap.set({'n', 't'}, '<M-h>', '<cmd>tabprevious<cr>')
-    vim.keymap.set({'n', 't'}, '<M-l>', '<cmd>tabnext<cr>')
+-- Tab Navigation
+vim.keymap.set({'n', 't'}, '<M-h>', '<cmd>tabprevious<cr>')
+vim.keymap.set({'n', 't'}, '<M-l>', '<cmd>tabnext<cr>')
 
-    -- Open a terminal
-    vim.keymap.set('n', '<leader>b/', '<cmd>sp term://bash<cr>')
-    vim.keymap.set('n', '<leader>b\\', '<cmd>vsp term://bash<cr>')
+-- Open a terminal
+vim.keymap.set('n', '<leader>b/', '<cmd>sp term://bash<cr>')
+vim.keymap.set('n', '<leader>b\\', '<cmd>vsp term://bash<cr>')
 
-    -- Terminal configs
-    vim.keymap.set('t', '<C-space>', [[<C-\><c-n>]])
-    vim.api.nvim_create_autocmd(
-        'BufEnter',
-        { pattern = 'term://*', callback = function() vim.cmd.startinsert() end}
-    )
+-- Terminal configs
+vim.keymap.set('t', '<C-space>', [[<C-\><c-n>]])
+vim.api.nvim_create_autocmd(
+    'BufEnter',
+    { pattern = 'term://*', callback = function() vim.cmd.startinsert() end}
+)
 
-    -- Scrolling
-    vim.keymap.set('n', '<M-k>', '<C-u>')
-    vim.keymap.set('n', '<M-j>', '<C-d>')
+-- Scrolling
+vim.keymap.set('n', '<M-k>', '<C-u>')
+vim.keymap.set('n', '<M-j>', '<C-d>')
 
-    -- Open the file explorer
-    vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+-- Open the file explorer
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
-    -- Turn on and off the color column
-    vim.keymap.set(
-        'n',
-        '<leader>C',
-        function()
-            if vim.o.colorcolumn == ''
-                then vim.o.colorcolumn = '80'
-                else vim.o.colorcolumn = ''
-            end
+-- Turn on and off the color column
+vim.keymap.set(
+    'n',
+    '<leader>C',
+    function()
+        if vim.o.colorcolumn == ''
+        then vim.o.colorcolumn = '80'
+        else vim.o.colorcolumn = ''
         end
-    )
-
-    -- Folding
-    vim.keymap.set('n', '<Space>', 'za')
-    vim.keymap.set('n', '<M-Space>', 'zA')
-
-    -- Set folding levels
-    for i = 0, 9 do
-        vim.keymap.set('n', '<leader>f'..i, ':set foldlevel='..i..'<cr>')
     end
+)
+
+-- Folding
+vim.keymap.set('n', '<Space>', 'za')
+vim.keymap.set('n', '<M-Space>', 'zA')
+
+-- Set folding levels
+for i = 0, 9 do
+    vim.keymap.set('n', '<leader>f'..i, ':set foldlevel='..i..'<cr>')
+end
 
 -- }}}
