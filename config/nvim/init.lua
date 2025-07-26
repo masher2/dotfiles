@@ -153,6 +153,24 @@ require('lazy').setup({
                 { '<leader>fg', ':Telescope live_grep<cr>' },
             }
         },
+        {
+            'echasnovski/mini.nvim',
+            config = function()
+                require('mini.ai').setup()
+                require('mini.align').setup()
+                require('mini.git').setup()
+                require('mini.icons').setup()
+                require('mini.statusline').setup()
+                require('mini.trailspace').setup()
+                vim.keymap.set(
+                    'n',
+                    '<leader>TA',
+                    function()
+                        MiniTrailspace.trim()
+                        MiniTrailspace.trim_last_lines()
+                    end
+                )
+            end
         {   -- Hexadecimal color hints
             'norcalli/nvim-colorizer.lua', 
             init = function ()
