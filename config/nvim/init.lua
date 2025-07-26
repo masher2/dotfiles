@@ -264,6 +264,7 @@ vim.api.nvim_create_autocmd(
 -- split in the right direction
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.opt.diffopt:append('vertical')
 
 -- Remove min size limitations for when maximizing splits
 vim.o.winminheight = 0
