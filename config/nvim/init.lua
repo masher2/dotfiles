@@ -285,6 +285,9 @@ vim.o.foldnestmax = 5
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- Open help in a vertical left panel
+vim.api.nvim_create_autocmd( 'FileType', {pattern = 'help', command = 'wincmd H' } )
+
 -- }}}
 
 -- Key bindings {{{
