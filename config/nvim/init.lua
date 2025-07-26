@@ -314,6 +314,21 @@ vim.keymap.set('n', '<leader>w.', '10<C-w>>')
 vim.keymap.set('n', '<leader>dt', '<cmd>diffthis<cr>')
 vim.keymap.set('n', '<leader>do', '<cmd>diffoff<cr>')
 
+-- :diffput in visual mode
+vim.keymap.set(
+    'x',
+    '<leader>dp',
+    function()
+        vim.cmd(
+            vim.fn.line('v') ..
+            ',' ..
+            vim.fn.line('.') ..
+            'diffput'
+        )
+        vim.api.nvim_input('<esc>')
+    end
+)
+
 -- Saving and quitting
 vim.keymap.set('n', '<M-w>', '<cmd>w<cr>')
 vim.keymap.set('n', '<M-q>', '<cmd>q<cr>')
