@@ -26,6 +26,27 @@ require('lazy').setup({
         'tpope/vim-repeat',  -- Repeat plugin maps
         'tpope/vim-surround',  -- Add surrounding text movements
         'mattn/calendar-vim',  -- Calendar
+        {   -- Ledger
+            'ledger/vim-ledger',
+            dependencies = { 'rcaputo/vim-ledger_x' },
+            ft = 'ledger',
+            init = function()
+                vim.api.nvim_create_autocmd('FileType', {
+                    pattern = 'ledger',
+                    callback = function()
+                        local tabwidth = 2
+                        vim.g.ledger_winpos = 'R'
+                        vim.bo.tabstop = tabwidth
+                        vim.bo.shiftwidth = tabwidth
+                        vim.bo.softtabstop = tabwidth
+                        vim.keymap.set('n', '<cr>', ':Bal<cr>', { buffer = true} )
+                        vim.keymap.set('n', '<M-b>', ':Ledger bal', { buffer = true} )
+                        vim.keymap.set('n', '<M-r>', ':Ledger reg', { buffer = true} )
+                    end
+                })
+            end
+        },
+        'rcaputo/vim-ledger_x',
         {   -- Improve comment motions
             'tpope/vim-commentary',
             enabled = false
