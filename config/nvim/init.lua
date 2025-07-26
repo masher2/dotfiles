@@ -115,6 +115,14 @@ require('lazy').setup({
                 }
             }
         },
+        {
+            'nvim-telescope/telescope.nvim',
+            dependencies = { 'nvim-lua/plenary.nvim' },
+            keys = {
+                { '<leader>ff', ':Telescope find_files<cr>' },
+                { '<leader>fg', ':Telescope live_grep<cr>' },
+            }
+        },
         {   -- Hexadecimal color hints
             'norcalli/nvim-colorizer.lua', 
             init = function ()
