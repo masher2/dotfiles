@@ -26,6 +26,7 @@ require('lazy').setup({
         'tpope/vim-repeat',  -- Repeat plugin maps
         'tpope/vim-surround',  -- Add surrounding text movements
         'mattn/calendar-vim',  -- Calendar
+        'rafamadriz/friendly-snippets',  -- Snippets
         {   -- Ledger
             'ledger/vim-ledger',
             dependencies = { 'rcaputo/vim-ledger_x' },
@@ -166,6 +167,16 @@ require('lazy').setup({
                     },
                 })
                 require('mini.icons').setup()
+                local gen_loader = require('mini.snippets').gen_loader
+                require('mini.snippets').setup({
+                    snippets = {
+                        gen_loader.from_lang()
+                    },
+                    mappings = {
+                        jump_next = '<Tab>',
+                        jump_prev = '<S-Tab>',
+                    },
+                })
                 require('mini.statusline').setup()
                 require('mini.trailspace').setup()
                 vim.keymap.set(
