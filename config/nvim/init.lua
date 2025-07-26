@@ -216,14 +216,53 @@ require('lazy').setup({
                     enable = true,
                     disable = {'csv', 'tsv'},
                 },
-                -- TODO: Check keybinds
-                incemental_selection = {
-                    enable = true
-                },
                 indent = {
                     enable = true
-                }
+                },
+                textobjects = {
+                    select = {
+                        enable = true,
+                        lookahead = true,
+                        keymaps = {
+                            ['ac'] = '@class.outer',
+                            ['ic'] = '@class.inner',
+                            ['af'] = '@function.outer',
+                            ['if'] = '@function.inner',
+                        },
+                        selection_modes = {
+                            ['@class.outer'] = 'V',
+                            ['@class.inner'] = 'V',
+                            ['@function.outer'] = 'V',
+                            ['@function.inner'] = 'V',
+                        },
+                    },
+                    move = {
+                        enable = true,
+                        set_jumps = true,
+                        goto_next_start = {
+                            [']c'] = '@class.outer',
+                            [']f'] = '@function.outer',
+                        },
+                        goto_next_end = {
+                            [']C'] = '@class.outer',
+                            [']F'] = '@function.outer',
+                        },
+                        goto_previous_start = {
+                            ['[c'] = '@class.outer',
+                            ['[f'] = '@function.outer',
+                        },
+                        goto_previous_end = {
+                            ['[C'] = '@class.outer',
+                            ['[F'] = '@function.outer',
+                        },
+                    },
+                },
             }
+        },
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        {
+            'nvim-treesitter/nvim-treesitter-context',
+            opts = { enable = true }
         },
         {
             'nvim-neorg/neorg',
