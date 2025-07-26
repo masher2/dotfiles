@@ -48,13 +48,13 @@ require('lazy').setup({
         {   -- Git integration
             'tpope/vim-fugitive',
             keys = {
-                { '<leader>gg', '<cmd>Git<cr>', silent = true},
+                { '<leader>gg', '<cmd>G<cr>', silent = true},
                 { '<leader>gd', '<cmd>Gdiff<cr>', silent = true},
-                { '<leader>gc', '<cmd>Git commit<cr>', silent = true },
-                { '<leader>ga', '<cmd>Git commit --amend<cr>', silent = true },
-                { '<leader>gA', '<cmd>Git commit --amend --no-edit<cr>', silent = true },
-                { '<leader>gb', '<cmd>Git blame<cr>', silent = true },
-                { '<leader>gp', '<cmd>Git push<cr>' },
+                { '<leader>gc', '<cmd>G commit<cr>', silent = true },
+                { '<leader>ga', '<cmd>G commit --amend<cr>', silent = true },
+                { '<leader>gA', '<cmd>G commit --amend --no-edit<cr>', silent = true },
+                { '<leader>gb', '<cmd>G blame<cr>', silent = true },
+                { '<leader>gp', '<cmd>G push<cr>' },
             },
         },
         {   -- Improve code folds' format
