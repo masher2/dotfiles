@@ -159,6 +159,12 @@ require('lazy').setup({
                 require('mini.ai').setup()
                 require('mini.align').setup()
                 require('mini.git').setup()
+                require('mini.hipatterns').setup({
+                    highlighters = {
+                        -- Highlight hex color strings (`#rrggbb`) using that color
+                        hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
+                    },
+                })
                 require('mini.icons').setup()
                 require('mini.statusline').setup()
                 require('mini.trailspace').setup()
@@ -171,12 +177,6 @@ require('lazy').setup({
                     end
                 )
             end
-        {   -- Hexadecimal color hints
-            'norcalli/nvim-colorizer.lua', 
-            init = function ()
-                vim.o.termguicolors = true
-            end,
-            opts = { '*' }
         },
         { 'nvimdev/indentmini.nvim', config = true },  -- Indent lines
         {   -- File explorer
