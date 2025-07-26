@@ -105,7 +105,7 @@ require('lazy').setup({
 
         -- nvim plugins
         {'vhyrro/luarocks.nvim', priority = 1000, config = true },  -- luarocks support
-        {
+        {   -- Dark colorscheme
             'catppuccin/nvim',
             name = 'catppuccin',
             priority = 1000,
@@ -122,7 +122,7 @@ require('lazy').setup({
                 end
             }
         },
-        {
+        {   -- Light colorscheme
             'maxmx03/solarized.nvim',
             lazy = false,
             priority = 1000,
