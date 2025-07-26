@@ -47,6 +47,15 @@ require('lazy').setup({
             end
         },
         'rcaputo/vim-ledger_x',
+        'tpope/vim-dadbod',  -- SQL
+        {
+            'kristijanhusak/vim-dadbod-ui',
+            init = function()
+                vim.api.nvim_create_autocmd('FileType', {
+                    pattern = 'dbui',
+                    command = 'setlocal foldmethod=manual'
+                })
+            end
         {   -- Improve comment motions
             'tpope/vim-commentary',
             enabled = false
