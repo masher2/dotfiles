@@ -57,9 +57,6 @@ require('lazy').setup({
                     command = 'setlocal foldmethod=manual'
                 })
             end
-        {   -- Improve comment motions
-            'tpope/vim-commentary',
-            enabled = false
         },
         {   -- Syntax highlighting
             'sheerun/vim-polyglot',
